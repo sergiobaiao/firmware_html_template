@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automa&ccedil;&otilde;es</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab active" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="topline">
+    <div class="subtabs">
+      <a class="subtab active" href="automations.html">Regras</a>
+      <a class="subtab" href="automations_variables.html">Vari&aacute;veis</a>
+    </div>
+    <div class="actions-right">
+      <a href="automations_edit.html" class="btn primary" style="text-decoration:none">Adicionar Regra</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="toolbar">
+      <div class="filters">
+        <div class="filter">Todas</div>
+        <div class="filter">Habilitadas</div>
+        <div class="filter">Expostas</div>
+      </div>
+      <input class="search" type="text" placeholder="Buscar por nome, DI, sensor...">
+    </div>
+
+    <div class="table-wrap">
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th style="text-align:center">Habilitar</th>
+            <th style="width:11%">Nome</th>
+            <th style="width:29%">Se</th>
+            <th style="width:35%">Ent&atilde;o</th>
+            <th>Expor</th>
+            <th>&Uacute;ltimo disparo</th>
+            <th>A&ccedil;&atilde;o</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><div class="rule-name">Irriga&ccedil;&atilde;o</div></td>
+            <td><div class="main-line ellipsis">Seg&ndash;Sex 06:00</div></td>
+            <td><div class="main-line ellipsis">Sa&iacute;das 1-6 ligar | Aguardar 60 s | Sa&iacute;das 1-6 desligar</div></td>
+            <td>API</td>
+            <td style="font-size:13px">27/03/2026 06:00</td>
+            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><div class="rule-name">Cena TV</div><div class="rule-meta">Modo: Recome&ccedil;ar</div></td>
+            <td><div class="main-line ellipsis">DI1 duplo clique ou DI2 clique</div><div class="sub-line ellipsis">Somente se: Modo noturno ligado</div></td>
+            <td><div class="main-line ellipsis">Sa&iacute;das 1-3 ligar | Bomba = Ligado</div></td>
+            <td>API Aux</td>
+            <td style="font-size:13px">&mdash;</td>
+            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><div class="rule-name">Prote&ccedil;&atilde;o bomba</div></td>
+            <td><div class="main-line ellipsis">AI1 &gt; 10,5</div><div class="sub-line ellipsis">Somente se: Bomba ligado e Internet ligado</div></td>
+            <td><div class="main-line ellipsis">Sa&iacute;das 1-4 desligar | Bomba = Desligado | Alarme = Ligado</div></td>
+            <td>&mdash;</td>
+            <td style="font-size:13px">&mdash;</td>
+            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><div class="rule-name">Polling sensor</div></td>
+            <td><div class="main-line ellipsis">A cada 15 min</div></td>
+            <td><div class="main-line ellipsis">Modo noturno = Alternar</div></td>
+            <td>API</td>
+            <td style="font-size:13px">27/03/2026 18:45</td>
+            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+          </tr>
+          <tr style="color:#9ca3af">
+            <td>5</td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><div class="rule-name" style="color:inherit">Failover rede</div></td>
+            <td><div class="main-line ellipsis" style="color:inherit">ETH link caiu ou Wi-Fi caiu</div></td>
+            <td><div class="main-line ellipsis" style="color:inherit">Alarme = Ligado</div></td>
+            <td>API</td>
+            <td style="font-size:13px">&mdash;</td>
+            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

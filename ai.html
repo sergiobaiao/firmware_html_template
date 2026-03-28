@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entradas Anal&oacute;gicas</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+.live-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px}
+.live-card{border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--card)}
+.live-label{font:600 11px/1.2 var(--font);color:var(--muted);margin-bottom:4px}
+.live-value{font:600 18px/1.2 var(--font);color:var(--text)}
+.chip{display:inline-flex;align-items:center;font:600 11px/1 var(--font);padding:3px 8px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--muted)}
+.chip.ok{background:#e6f4ea;border-color:#a7f3d0;color:#065f46}
+.chip.warn{background:#fef3c7;border-color:#fcd34d;color:#92400e}
+.chip.err{background:#fdecec;border-color:#fca5a5;color:#7f1d1d}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="header">
+    <div></div>
+    <div style="display:flex;gap:6px">
+      <a href="ui2.html" class="btn" style="text-decoration:none">Voltar</a>
+      <button class="btn primary">Salvar</button>
+    </div>
+  </div>
+
+  <!-- Seletor de canal -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Sele&ccedil;&atilde;o de canal</h2></div>
+    <div class="fields">
+      <div class="field span-3">
+        <div class="label">Canal</div>
+        <select>
+          <option selected>AI1</option>
+          <option>AI2</option>
+          <option>AI3</option>
+          <option>AI4</option>
+        </select>
+      </div>
+      <div class="field span-3">
+        <div class="label">Habilitar</div>
+        <div class="switch-row">
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+          <span class="switch-label">Ativado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Identificacao -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Identifica&ccedil;&atilde;o</h2></div>
+    <div class="fields">
+      <div class="field span-6">
+        <div class="label">Nome do sensor</div>
+        <input type="text" value="Press&atilde;o do tanque" maxlength="23">
+      </div>
+      <div class="field span-6">
+        <div class="label">Modo de entrada</div>
+        <select>
+          <option>0-10 V</option>
+          <option selected>4-20 mA</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Escala do sensor -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Escala do sensor</h2></div>
+    <div class="fields">
+      <div class="field span-4">
+        <div class="label">Range m&iacute;nimo</div>
+        <input type="number" value="0" step="0.01">
+      </div>
+      <div class="field span-4">
+        <div class="label">Range m&aacute;ximo</div>
+        <input type="number" value="10" step="0.01">
+      </div>
+      <div class="field span-4">
+        <div class="label">Unidade</div>
+        <input type="text" value="bar" maxlength="11">
+      </div>
+    </div>
+  </div>
+
+  <!-- Escala da aplicacao -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Escala da aplica&ccedil;&atilde;o (avan&ccedil;ado)</h2></div>
+    <div class="fields">
+      <div class="field span-4">
+        <div class="label">Range da aplica&ccedil;&atilde;o &mdash; m&iacute;nimo</div>
+        <input type="number" value="0" step="0.01">
+      </div>
+      <div class="field span-4">
+        <div class="label">Range da aplica&ccedil;&atilde;o &mdash; m&aacute;ximo</div>
+        <input type="number" value="10" step="0.01">
+      </div>
+      <div class="field span-4">
+        <div class="label">Unidade</div>
+        <input type="text" value="(mesma do sensor)" class="readonly" readonly>
+      </div>
+    </div>
+  </div>
+
+  <!-- Escala de exibicao -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Escala da exibi&ccedil;&atilde;o (opcional)</h2></div>
+    <div class="fields">
+      <div class="field span-4">
+        <div class="label">Exibi&ccedil;&atilde;o &mdash; m&iacute;nimo</div>
+        <input type="number" value="0" step="0.01">
+      </div>
+      <div class="field span-4">
+        <div class="label">Exibi&ccedil;&atilde;o &mdash; m&aacute;ximo</div>
+        <input type="number" value="600000" step="0.01">
+      </div>
+      <div class="field span-4">
+        <div class="label">Unidade de exibi&ccedil;&atilde;o</div>
+        <input type="text" value="L" maxlength="11">
+      </div>
+    </div>
+  </div>
+
+  <!-- Alertas e suavizacao -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Alertas e suaviza&ccedil;&atilde;o</h2></div>
+    <div class="fields">
+      <div class="field span-3">
+        <div class="label">Alerta m&iacute;nimo</div>
+        <input type="number" value="1" step="0.01">
+      </div>
+      <div class="field span-3">
+        <div class="label">Alerta m&aacute;ximo</div>
+        <input type="number" value="9" step="0.01">
+      </div>
+      <div class="field span-3">
+        <div class="label">Histerese (%)</div>
+        <input type="number" value="2" step="0.1" min="0" max="20">
+      </div>
+      <div class="field span-3">
+        <div class="label">Suaviza&ccedil;&atilde;o</div>
+        <select>
+          <option selected>R&aacute;pida</option>
+          <option>M&eacute;dia</option>
+          <option>Lenta</option>
+          <option>Sem suaviza&ccedil;&atilde;o (NONE)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monitoramento ao vivo -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Monitoramento ao vivo</h2></div>
+    <div class="live-grid">
+      <div class="live-card">
+        <div class="live-label">Modo</div>
+        <span class="chip">4-20 mA</span>
+      </div>
+      <div class="live-card">
+        <div class="live-label">Monitoramento do sinal</div>
+        <span class="chip ok">OK</span>
+      </div>
+      <div class="live-card">
+        <div class="live-label">Alertas</div>
+        <div style="display:flex;gap:4px;flex-wrap:wrap">
+          <span class="chip">Min: OK</span>
+          <span class="chip">M&aacute;x: OK</span>
+        </div>
+      </div>
+      <div class="live-card">
+        <div class="live-label">Sinal el&eacute;trico (V / mA)</div>
+        <div class="live-value">4.23 mA</div>
+      </div>
+      <div class="live-card">
+        <div class="live-label">Sinal de engenharia (bruto)</div>
+        <div class="live-value">2.64 bar</div>
+      </div>
+      <div class="live-card">
+        <div class="live-label">Valor exibido (filtrado)</div>
+        <div class="live-value">2.63 bar</div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px">
+      <div class="live-label" style="margin-bottom:6px">Pr&eacute;via da barra</div>
+      <div class="bar"><div class="fill ok" style="width:26%"></div></div>
+      <div class="bar-labels"><span>0 bar</span><span>10 bar</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

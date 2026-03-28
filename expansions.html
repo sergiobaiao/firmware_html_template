@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Expans&otilde;es</title>
+<link rel="stylesheet" href="ui.css">
+<script src="ui.js"></script>
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab active" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="header">
+    
+    <div style="display:flex;gap:6px">
+      <button class="btn">Procurar placas</button>
+      <button class="btn primary">Salvar</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Placas de Expan&ccedil;&atilde;o</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:50px">Slot</th>
+            <th style="width:70px">Habilitar</th>
+            <th style="width:160px">Modelo <span class="tip-hit" onclick="openTip('Modelo da placa de expans\u00e3o.\nB88-I2C: 8 DI + 8 DO via MCP23017.')"><span class="tip-icon">i</span></span></th>
+            <th style="width:120px">Endere&ccedil;o I2C <span class="tip-hit" onclick="openTip('Endere\u00e7o I2C do MCP23017.\nCada placa deve ter um endere\u00e7o \u00fanico (0x20\u20130x27).\nUse \u201cProcurar placas\u201d para detectar automaticamente.')"><span class="tip-icon">i</span></span></th>
+            <th>Nome</th>
+            <th style="width:100px">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><select><option>Nenhum</option><option selected>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
+            <td><select><option selected>0x20</option><option>0x21</option><option>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
+            <td><input type="text" value="Painel 1" maxlength="23" placeholder="ex: Casa de bombas"></td>
+            <td><span class="badge on">Online</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><select><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
+            <td><select><option>0x20</option><option selected>0x21</option><option>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
+            <td><input type="text" value="" placeholder="Nome..." maxlength="23" ></td>
+            <td><span class="badge">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><select><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
+            <td><select><option>0x20</option><option>0x21</option><option selected>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
+            <td><input type="text" value="" placeholder="Nome..." maxlength="23" ></td>
+            <td><span class="badge">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><select><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
+            <td><select><option>0x20</option><option>0x21</option><option>0x22</option><option selected>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
+            <td><input type="text" value="" placeholder="Nome..." maxlength="23" ></td>
+            <td><span class="badge">&mdash;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

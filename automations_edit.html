@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Editar Automa&ccedil;&atilde;o</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+.top-grid{display:grid;grid-template-columns:minmax(320px,1.6fr) minmax(280px,1fr);gap:12px;margin-bottom:12px}
+.section{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;margin-bottom:12px}
+.section:last-child{margin-bottom:0}
+.section-head{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:10px 14px;border-bottom:1px solid var(--line);background:var(--soft-2);flex-wrap:wrap;
+}
+.section-title{margin:0;font:600 14px/1.2 var(--font)}
+.stack{display:grid;gap:8px;padding:12px}
+.item{border:1px solid var(--line);border-radius:10px;background:#fff;padding:10px}
+.item-top{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:8px}
+.item-name{margin:0;font:600 12px/1.2 var(--font)}
+.item-remove{color:var(--muted);font:400 11px/1.2 var(--font);cursor:pointer}
+.item-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:8px}
+.toggle-group{display:flex;gap:6px;flex-wrap:wrap}
+.toggle-pill{border:1px solid var(--line);border-radius:10px;padding:7px 9px;min-width:124px;background:#fff}
+.toggle-pill .label{margin-bottom:5px}
+.mini-btn{
+  border:1px solid var(--line);background:#fff;color:var(--text);
+  border-radius:10px;padding:6px 10px;font:600 12px/1 var(--font);cursor:pointer;
+  min-height:auto;white-space:nowrap;
+}
+.days-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;min-height:34px}
+.days-row label{font:400 13px/1.2 var(--font);display:flex;align-items:center;gap:3px;cursor:pointer}
+.days-row input[type="checkbox"]{width:16px;height:16px;min-height:auto;margin:0;accent-color:var(--primary)}
+@media(max-width:1100px){.top-grid{grid-template-columns:1fr}}
+@media(max-width:860px){.item-grid .field{grid-column:span 12!important}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab active" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="subtabs">
+    <a class="subtab active" href="automations.html">Regras</a>
+    <a class="subtab" href="automations_variables.html">Vari&aacute;veis</a>
+  </div>
+
+  <div class="header">
+    <div></div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <a href="automations.html" class="btn" style="text-decoration:none">Cancelar</a>
+      <button class="btn">Duplicar</button>
+      <button class="btn primary">Salvar</button>
+    </div>
+  </div>
+
+  <!-- Top grid: Dados gerais + Exposicao -->
+  <div class="top-grid">
+    <div class="card" style="margin-bottom:0">
+      <div class="panel-head"><h2 class="panel-title">Dados gerais</h2></div>
+      <div class="fields">
+        <div class="field span-8">
+          <div class="label">Nome</div>
+          <input type="text" value="Cena TV" maxlength="23">
+        </div>
+        <div class="field span-4">
+          <div class="label">ID</div>
+          <div class="readonly" style="min-height:34px;border:1px solid var(--line);border-radius:10px;padding:7px 10px;font:400 13px/1.2 var(--font)">2</div>
+        </div>
+        <div class="field span-6">
+          <div class="label">Modo de execu&ccedil;&atilde;o</div>
+          <select><option>&Uacute;nico</option><option selected>Recome&ccedil;ar</option></select>
+        </div>
+        <div class="field span-6">
+          <div class="label">Per&iacute;odo de espera (ms)</div>
+          <input type="number" value="2000">
+        </div>
+        <div class="field span-12">
+          <div class="label">Habilitada</div>
+          <div class="switch-row">
+            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+            <span class="switch-label">Ativa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:0">
+      <div class="panel-head"><h2 class="panel-title">Expor acionamento</h2></div>
+      <div class="toggle-group">
+        <div class="toggle-pill">
+          <div class="label">API</div>
+          <div class="switch-row">
+            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+            <span class="switch-label">Ligada</span>
+          </div>
+        </div>
+        <div class="toggle-pill">
+          <div class="label">MQTT auxiliar</div>
+          <div class="switch-row">
+            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+            <span class="switch-label">Desligada</span>
+          </div>
+        </div>
+        <div class="toggle-pill">
+          <div class="label">Cloud</div>
+          <div class="switch-row">
+            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+            <span class="switch-label">Desligada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dispara quando -->
+  <div class="section">
+    <div class="section-head">
+      <h2 class="section-title">Dispara quando</h2>
+      <button class="mini-btn">+ Gatilho</button>
+    </div>
+    <div class="stack">
+      <div class="item">
+        <div class="item-top">
+          <p class="item-name">Gatilho 1</p>
+          <div class="item-remove">Remover</div>
+        </div>
+        <div class="item-grid">
+          <div class="field span-4">
+            <div class="label">Fam&iacute;lia</div>
+            <select><option selected>Entrada digital</option><option>Entrada anal&oacute;gica por valor</option><option>Rede</option><option>Hor&aacute;rio</option><option>Vari&aacute;vel</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">Tipo</div>
+            <select><option>Clique &uacute;nico</option><option selected>Clique duplo</option><option>Pressionado (Hold On)</option><option>Borda de subida</option><option>Borda de descida</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">Canal</div>
+            <select><option selected>DI1</option><option>DI2</option><option>DI3</option><option>DI4</option><option>DI5</option><option>DI6</option><option>DI7</option><option>DI8</option></select>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-top">
+          <p class="item-name">Gatilho 2</p>
+          <div class="item-remove">Remover</div>
+        </div>
+        <div class="item-grid">
+          <div class="field span-4">
+            <div class="label">Fam&iacute;lia</div>
+            <select><option selected>Entrada digital</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">Tipo</div>
+            <select><option selected>Clique &uacute;nico</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">Canal</div>
+            <select><option>DI1</option><option selected>DI2</option></select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Somente se -->
+  <div class="section">
+    <div class="section-head">
+      <h2 class="section-title" style="white-space:nowrap">Somente se</h2>
+      <div style="display:flex;gap:6px;align-items:center">
+        <select class="mini-btn" style="width:auto;min-height:0;height:auto"><option selected>Todas</option><option>Qualquer uma</option></select>
+        <button class="mini-btn">+ Condi&ccedil;&atilde;o</button>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="item">
+        <div class="item-top">
+          <p class="item-name">Condi&ccedil;&atilde;o 1</p>
+          <div class="item-remove">Remover</div>
+        </div>
+        <div class="item-grid">
+          <div class="field span-4">
+            <div class="label">Tipo</div>
+            <select><option>Entrada digital</option><option selected>Vari&aacute;vel</option><option>Ethernet link</option><option>Internet</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">Canal</div>
+            <select><option>Bomba</option><option>Alarme</option><option selected>Modo noturno</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">Estado</div>
+            <select><option selected>Ligado</option><option>Desligado</option></select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entao -->
+  <div class="section">
+    <div class="section-head">
+      <h2 class="section-title">Ent&atilde;o</h2>
+      <button class="mini-btn">+ A&ccedil;&atilde;o</button>
+    </div>
+    <div class="stack">
+      <div class="item">
+        <div class="item-top">
+          <p class="item-name">A&ccedil;&atilde;o 1</p>
+          <div class="item-remove">Remover</div>
+        </div>
+        <div class="item-grid">
+          <div class="field span-4">
+            <div class="label">Tipo</div>
+            <select><option selected>Sa&iacute;das digitais</option><option>Aguardar</option><option>Vari&aacute;vel</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">Ligar</div>
+            <input type="text" value="1 2 3">
+          </div>
+          <div class="field span-4">
+            <div class="label">Desligar</div>
+            <input type="text" value="">
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-top">
+          <p class="item-name">A&ccedil;&atilde;o 2</p>
+          <div class="item-remove">Remover</div>
+        </div>
+        <div class="item-grid">
+          <div class="field span-4">
+            <div class="label">Tipo</div>
+            <select><option>Sa&iacute;das digitais</option><option>Aguardar</option><option selected>Vari&aacute;vel</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">Vari&aacute;vel</div>
+            <select><option selected>Bomba</option><option>Alarme</option><option>Modo noturno</option></select>
+          </div>
+          <div class="field span-4">
+            <div class="label">A&ccedil;&atilde;o</div>
+            <select><option selected>Ligar</option><option>Desligar</option><option>Alternar</option></select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-actions">
+    <div class="footer-left">
+      <a href="automations.html" class="btn" style="text-decoration:none">Voltar</a>
+      <button class="btn">Duplicar</button>
+    </div>
+    <div class="footer-right">
+      <a href="automations.html" class="btn" style="text-decoration:none">Cancelar</a>
+      <button class="btn primary">Salvar</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

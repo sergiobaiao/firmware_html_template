@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vari&aacute;veis</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab active" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="topline">
+    <div class="subtabs">
+      <a class="subtab" href="automations.html">Regras</a>
+      <a class="subtab active" href="automations_variables.html">Vari&aacute;veis</a>
+    </div>
+    <div class="actions-right">
+      <a href="#" class="btn primary" style="text-decoration:none">Adicionar Vari&aacute;vel</a>
+      <button class="btn primary">Salvar</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:36px">ID</th>
+            <th style="width:70px">Habilitar</th>
+            <th>Nome</th>
+            <th style="width:80px;text-align:center">Atual</th>
+            <th style="width:140px">Estado padr&atilde;o</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input type="text" value="Bomba" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td>
+            <td style="text-align:center">Ligada</td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input type="text" value="Alarme" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td>
+            <td style="text-align:center">Desligada</td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input type="text" value="Modo noturno" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td>
+            <td style="text-align:center">Desligada</td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>Desligado</option><option>Ligado</option><option selected>&Uacute;ltimo estado</option></select></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input type="text" value="" placeholder="Nome da vari&aacute;vel..." style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td>
+            <td style="text-align:center">Desligada</td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

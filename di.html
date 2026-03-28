@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entradas Digitais</title>
+<link rel="stylesheet" href="ui.css">
+<script src="ui.js"></script>
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="header">
+    <div></div>
+    <div style="display:flex;gap:6px">
+      <a href="ui2.html" class="btn" style="text-decoration:none">Voltar</a>
+      <button class="btn primary">Salvar</button>
+    </div>
+  </div>
+
+  <!-- Temporizacao -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Temporiza&ccedil;&atilde;o</h2></div>
+    <div class="fields">
+      <div class="field span-4">
+        <div class="label">Debounce (ms) <span class="tip-hit" onclick="openTip('Filtro anti-repique el\u00e9trico.\nEvita leituras falsas por vibra\u00e7\u00e3o mec\u00e2nica do contato.\n0 = sem filtro.')"><span class="tip-icon">i</span></span></div>
+        <input type="number" value="0" min="0" max="200">
+      </div>
+      <div class="field span-4">
+        <div class="label">Duplo clique (ms) <span class="tip-hit" onclick="openTip('Janela de tempo para detectar duplo clique.\n0 = desabilitado.\nValor t\u00edpico: 300\u2013500 ms.')"><span class="tip-icon">i</span></span></div>
+        <input type="number" value="0" min="0" max="2000" step="10">
+      </div>
+      <div class="field span-4">
+        <div class="label">Hold / Segurar (ms) <span class="tip-hit" onclick="openTip('Tempo m\u00ednimo que o bot\u00e3o deve ficar pressionado para gerar evento de Hold.\n0 = desabilitado.\nValor t\u00edpico: 1000\u20133000 ms.')"><span class="tip-icon">i</span></span></div>
+        <input type="number" value="0" min="0" max="10000" step="50">
+      </div>
+    </div>
+  </div>
+
+  <!-- Canais -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Canais</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:60px">Canal</th>
+            <th style="width:60px">Habilitar</th>
+            <th style="width:60px">Inverter</th>
+            <th>Nome</th>
+            <th style="width:60px">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>DI1</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="Sensor 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td><td style="text-align:center"><span class="badge">0</span></td></tr>
+          <tr><td>DI2</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="Sensor 2" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td><td style="text-align:center"><span class="badge">0</span></td></tr>
+          <tr><td>DI3</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="Sensor 3" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td><td style="text-align:center"><span class="badge">0</span></td></tr>
+          <tr><td>DI4</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Sensor 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td style="text-align:center"><span class="badge">0</span></td></tr>
+          <tr><td>DI5</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Sensor 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td style="text-align:center"><span class="badge">0</span></td></tr>
+          <tr><td>DI6</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Sensor 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td style="text-align:center"><span class="badge">0</span></td></tr>
+          <tr><td>DI7</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Sensor 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td style="text-align:center"><span class="badge">0</span></td></tr>
+          <tr><td>DI8</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Sensor 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td style="text-align:center"><span class="badge">0</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

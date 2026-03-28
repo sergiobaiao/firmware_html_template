@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="login-wrap">
+  <div class="card login-card">
+    <div style="text-align:center;margin-bottom:16px;">
+      <div style="font:600 22px/1.2 var(--font);color:var(--primary);">B884-M</div>
+      <div style="font:400 12px/1.4 var(--font);color:var(--muted);margin-top:4px;">Braazi Automa&ccedil;&atilde;o Industrial</div>
+    </div>
+    <div class="fields">
+      <div class="field span-12">
+        <div class="label">Senha do Administrador</div>
+        <input type="password" id="login_pass" value="">
+      </div>
+      <div class="field span-12">
+        <label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" onchange="document.getElementById('login_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar senha</label>
+      </div>
+      <div class="field span-12">
+        <button class="btn primary" style="width:100%">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

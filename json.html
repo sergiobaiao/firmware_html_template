@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JSON</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab active" href="json.html">JSON</a>
+  </div>
+
+  <div class="card">
+    <div class="panel-head">
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <h2 class="panel-title">JSON</h2>
+        <button class="btn">Carregar</button>
+        <button class="btn primary">Salvar</button>
+        <button class="btn">Aplicar aos campos</button>
+        <button class="btn">Exportar</button>
+        <button class="btn">Importar</button>
+      </div>
+    </div>
+    <textarea style="width:100%;min-height:300px;background:#fff;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px;font:400 13px/1.5 monospace;resize:vertical">{
+  "magic": 2882343476,
+  "version": 23,
+  "eth_dhcp": true,
+  "eth_ip": "0.0.0.0",
+  "wifi_enabled": true,
+  "wifi_ap_mode": false,
+  "wifi_sta_ssid": "Daniel 2.4g",
+  "mqtt_server": "thingsboard.braazi.com.br",
+  "mqtt_port": 1883,
+  "mqtt_prio_1": "ETH",
+  "mqtt_prio_2": "WIFI",
+  "mqtt_prio_3": "4G",
+  "rs485_enabled": true,
+  "onewire_enabled": true,
+  "ads_enabled": true,
+  "ai_enabled": [1, 1, 1, 1],
+  "ai_label": ["Press\u00e3o Rede Sprinkler", "", "Volume RTI", ""],
+  "di_label": ["Sensor 1", "Sensor 2", "Sensor 3", "", "", "", "", ""],
+  "do_label": ["Atuador 1", "Atuador 2", "Atuador 3", "", "", "", "", ""],
+  "ntp_server": "pool.ntp.org",
+  "timezone_offset_min": -180
+}</textarea>
+  </div>
+</div>
+</body>
+</html>

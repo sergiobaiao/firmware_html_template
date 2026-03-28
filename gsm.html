@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modem</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab active" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="header">
+    
+    <button class="btn primary">Salvar</button>
+  </div>
+
+  <!-- Basico -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">B&aacute;sico</h2></div>
+    <div class="fields">
+      <div class="field span-12">
+        <div class="label">Habilitar</div>
+        <div class="switch-row">
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+          <span class="switch-label">Modem GSM ativado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APN -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">APN</h2></div>
+    <div class="fields">
+      <div class="field span-3">
+        <div class="label">Operadora</div>
+        <select>
+          <option selected>Vivo</option>
+          <option>TIM</option>
+          <option>Claro</option>
+          <option>Oi</option>
+          <option>Custom</option>
+        </select>
+      </div>
+      <div class="field span-3">
+        <div class="label">APN</div>
+        <input type="text" value="zap.vivo.com.br" maxlength="63">
+      </div>
+      <div class="field span-3">
+        <div class="label">Usu&aacute;rio</div>
+        <input type="text" value="vivo" maxlength="63">
+      </div>
+      <div class="field span-3">
+        <div class="label">Senha</div>
+        <input type="text" value="vivo" maxlength="63">
+      </div>
+    </div>
+  </div>
+
+  <!-- Administradores -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Administradores</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:50px">ID</th><th>Telefone</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><input type="text" value="+5585999001122" maxlength="31" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td></tr>
+          <tr><td>2</td><td><input type="text" value="+5585999003344" maxlength="31" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td></tr>
+          <tr><td>3</td><td><input type="text" value="" placeholder="+55..." maxlength="31" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td></tr>
+          <tr><td>4</td><td><input type="text" value="" placeholder="+55..." maxlength="31" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td></tr>
+          <tr><td>5</td><td><input type="text" value="" placeholder="+55..." maxlength="31" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font:400 12px/1.4 var(--font);color:var(--muted);margin-top:6px">Novas linhas aparecem automaticamente ao preencher a &uacute;ltima linha.</div>
+  </div>
+
+  <!-- Notificação por SMS -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Notifica&ccedil;&atilde;o por SMS</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:40px">ID</th><th style="width:50px">Ativo</th><th>Mensagem</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="159" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Mensagem SMS..."></td></tr>
+          <tr><td>2</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="159" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Mensagem SMS..."></td></tr>
+          <tr><td>3</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="159" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Mensagem SMS..."></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font:400 12px/1.4 var(--font);color:var(--muted);margin-top:6px">Novas linhas aparecem automaticamente ao preencher a &uacute;ltima linha.</div>
+  </div>
+
+  <!-- Controle por SMS -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Controle por SMS</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:40px">ID</th><th style="width:50px">Ativo</th><th>Mensagem</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="159" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Mensagem SMS..."></td></tr>
+          <tr><td>2</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="159" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Mensagem SMS..."></td></tr>
+          <tr><td>3</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="159" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Mensagem SMS..."></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font:400 12px/1.4 var(--font);color:var(--muted);margin-top:6px">Novas linhas aparecem automaticamente ao preencher a &uacute;ltima linha.</div>
+  </div>
+
+  <!-- Call-Control -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Controle por liga&ccedil;&atilde;o</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:40px">ID</th><th style="width:50px">Ativo</th><th>C&oacute;digo</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="31" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="C&oacute;digo..."></td></tr>
+          <tr><td>2</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="31" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="C&oacute;digo..."></td></tr>
+          <tr><td>3</td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" maxlength="31" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="C&oacute;digo..."></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font:400 12px/1.4 var(--font);color:var(--muted);margin-top:6px">Novas linhas aparecem automaticamente ao preencher a &uacute;ltima linha.</div>
+  </div>
+</div>
+</body>
+</html>

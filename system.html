@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sistema</title>
+<link rel="stylesheet" href="ui.css">
+<script src="ui.js"></script>
+<style>
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px}
+.info-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+.info-label{font:400 13px/1.3 var(--font);color:var(--text)}
+.info-value{font:600 13px/1.3 var(--font);color:var(--text);text-align:right}
+.crit{color:var(--danger);font-weight:600}
+@media(max-width:860px){.info-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab active" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="header">
+    <button class="btn primary">Salvar</button>
+  </div>
+
+
+  <!-- Aparência -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Aparência</h2></div>
+    <div class="fields">
+      <div class="field span-4">
+        <label class="label" for="theme-select">Tema</label>
+        <select id="theme-select">
+          <option value="0">Automático</option>
+          <option value="1">B884 Default Blue</option>
+          <option value="2">Cloud Dancer (2026)</option>
+          <option value="3">Modern Dark</option>
+          <option value="4">Carbon Mint (Tech)</option>
+          <option value="5">Eco-Digital</option>
+          <option value="6">Cyber Rose</option>
+          <option value="7">Solar Violet</option>
+          <option value="8">Midnight Gold</option>
+          <option value="9">Lava Core</option>
+          <option value="10">Corporate Steel</option>
+        </select>
+        <div class="theme-preview-note">Automático usa claro no tema 1 e escuro no tema 3.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Dispositivo -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Dispositivo</h2></div>
+    <div class="info-grid">
+      <div class="info-row"><span class="info-label">Modelo</span><span class="info-value">B884-M</span></div>
+      <div class="info-row"><span class="info-label">Device ID</span><span class="info-value">13CFD0</span></div>
+      <div class="info-row"><span class="info-label">MAC12</span><span class="info-value">CFD0</span></div>
+      <div class="info-row"><span class="info-label">AP SSID</span><span class="info-value">Braazi-B884-M-13CFD0</span></div>
+      <div class="info-row"><span class="info-label">Firmware</span><span class="info-value">1.6.0</span></div>
+    </div>
+  </div>
+
+  <!-- Saude do Sistema -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Sa&uacute;de do Sistema</h2></div>
+    <div class="info-grid">
+      <div class="info-row"><span class="info-label">Mem&oacute;ria interna (DRAM) <span class="tip-hit" onclick="openTip('Mem\u00f3ria principal do ESP32.\n> 40 KB = saud\u00e1vel\n25\u201340 KB = aten\u00e7\u00e3o\n< 25 KB = cr\u00edtico')"><span class="tip-icon">i</span></span></span><span class="info-value">48.2 KB</span></div>
+      <div class="info-row"><span class="info-label">DRAM m&iacute;nima <span class="tip-hit" onclick="openTip('Menor valor de DRAM livre desde o boot.\nIndica pico de uso de mem\u00f3ria.')"><span class="tip-icon">i</span></span></span><span class="info-value">35.1 KB</span></div>
+      <div class="info-row"><span class="info-label">Maior bloco DRAM <span class="tip-hit" onclick="openTip('Maior bloco cont\u00edguo de DRAM dispon\u00edvel.\nValor muito abaixo do total indica fragmenta\u00e7\u00e3o.')"><span class="tip-icon">i</span></span></span><span class="info-value">32.0 KB</span></div>
+      <div class="info-row"><span class="info-label">PSRAM <span class="tip-hit" onclick="openTip('Mem\u00f3ria PSRAM externa (8 MB).\nUsada para buffers grandes.\nMenos cr\u00edtica que DRAM.')"><span class="tip-icon">i</span></span></span><span class="info-value">7.8 MB</span></div>
+      <div class="info-row"><span class="info-label">Heap total <span class="tip-hit" onclick="openTip('Soma de DRAM + PSRAM livres.\nDRAM \u00e9 mais cr\u00edtica que PSRAM.')"><span class="tip-icon">i</span></span></span><span class="info-value">8.1 MB</span></div>
+      <div class="info-row"><span class="info-label">Pico do loop <span class="tip-hit" onclick="openTip('Tempo m\u00e1ximo do loop principal.\n< 50 ms = bom\n50\u2013100 ms = aten\u00e7\u00e3o\n> 100 ms = investigar')"><span class="tip-icon">i</span></span></span><span class="info-value">12 ms</span></div>
+      <div class="info-row"><span class="info-label">Loop atual <span class="tip-hit" onclick="openTip('Tempo da \u00faltima itera\u00e7\u00e3o do loop principal.')"><span class="tip-icon">i</span></span></span><span class="info-value">3 ms</span></div>
+      <div class="info-row"><span class="info-label">Recovery <span class="tip-hit" onclick="openTip('Est\u00e1gios de recovery autom\u00e1tico:\n\u2265 3 boots = AP+STA for\u00e7ado\n\u2265 6 boots = PPP/MQTT Cloud/HA desligados\n\u2265 10 boots = modo seguro (PPP/MQTT/Modbus desligados; IO local preservado)\nO contador zera ap\u00f3s 60s de uptime est\u00e1vel.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
+      <div class="info-row"><span class="info-label">Boot Count <span class="tip-hit" onclick="openTip('Contador de boots consecutivos sem estabiliza\u00e7\u00e3o.\nZera ap\u00f3s 60s de uptime est\u00e1vel.')"><span class="tip-icon">i</span></span></span><span class="info-value">1</span></div>
+      <div class="info-row"><span class="info-label">Fila DO <span class="tip-hit" onclick="openTip('Comandos pendentes na fila de sa\u00eddas digitais.\nIdeal: 0.')"><span class="tip-icon">i</span></span></span><span class="info-value">0</span></div>
+      <div class="info-row"><span class="info-label">Uptime <span class="tip-hit" onclick="openTip('Tempo desde o \u00faltimo boot.')"><span class="tip-icon">i</span></span></span><span class="info-value">2d 14h 33m</span></div>
+      <div class="info-row"><span class="info-label">OTA <span class="tip-hit" onclick="openTip('Estado da atualiza\u00e7\u00e3o remota de firmware (OTA).')"><span class="tip-icon">i</span></span></span><span class="info-value">Idle</span></div>
+      <div class="info-row"><span class="info-label">Requisi&ccedil;&otilde;es HTTP</span><span class="info-value">1.284</span></div>
+    </div>
+  </div>
+
+  <!-- Data e Hora -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Data e Hora</h2></div>
+    <div class="info-grid">
+      <div class="info-row"><span class="info-label">Hora da placa <span class="tip-hit" onclick="openTip('Hora local do dispositivo, com fuso hor\u00e1rio aplicado.')"><span class="tip-icon">i</span></span></span><span class="info-value">27/03/2026 18:45:12</span></div>
+      <div class="info-row"><span class="info-label">Fuso hor&aacute;rio</span><span class="info-value">UTC-3</span></div>
+      <div class="info-row"><span class="info-label">Origem da hora <span class="tip-hit" onclick="openTip('Fontes poss\u00edveis:\nNTP = sincronizado via internet\nRTC = rel\u00f3gio interno DS3231\nBrowser = sincronizado pelo navegador\nDegradado = RTC sem confirma\u00e7\u00e3o de precis\u00e3o')"><span class="tip-icon">i</span></span></span><span class="info-value">NTP</span></div>
+      <div class="info-row"><span class="info-label">&Uacute;ltima sincroniza&ccedil;&atilde;o <span class="tip-hit" onclick="openTip('Momento da \u00faltima sincroniza\u00e7\u00e3o de hora bem-sucedida.')"><span class="tip-icon">i</span></span></span><span class="info-value">27/03/2026 18:30:00</span></div>
+    </div>
+    <div style="margin-top:12px"><button class="btn">Sincronizar hora do navegador</button></div>
+  </div>
+
+  <!-- Rede -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Rede</h2></div>
+    <div class="info-grid">
+      <div class="info-row"><span class="info-label">ETH</span><span class="info-value">Link &mdash; 192.168.100.31</span></div>
+      <div class="info-row"><span class="info-label">WiFi STA</span><span class="info-value">Conectado &mdash; 192.168.100.22</span></div>
+      <div class="info-row"><span class="info-label">4G/PPP</span><span class="info-value">Ativo &mdash; 100.89.7.92</span></div>
+      <div class="info-row"><span class="info-label">Sinal GSM <span class="tip-hit" onclick="openTip('N\u00edvel de sinal GSM:\n> -70 dBm = Excelente\n-70 a -85 dBm = Bom\n-85 a -100 dBm = Regular\n< -100 dBm = Fraco')"><span class="tip-icon">i</span></span></span><span class="info-value">-61 dBm (Excelente)</span></div>
+      <div class="info-row"><span class="info-label">Operadora</span><span class="info-value">Vivo</span></div>
+      <div class="info-row"><span class="info-label">Cloud/App</span><span class="info-value">Conectado</span></div>
+      <div class="info-row"><span class="info-label">Cloud/App transporte</span><span class="info-value">ETH</span></div>
+      <div class="info-row"><span class="info-label">MQTT Auxiliar</span><span class="info-value">HA Conectado</span></div>
+      <div class="info-row"><span class="info-label">MQTT Auxiliar transporte</span><span class="info-value">ETH</span></div>
+    </div>
+  </div>
+
+  <!-- Hardware -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Hardware</h2></div>
+    <div class="info-grid">
+      <div class="info-row"><span class="info-label">MCP23017 <span class="tip-hit" onclick="openTip('Expansor de IO I2C.\nControla DI/DO das placas de expans\u00e3o.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
+      <div class="info-row"><span class="info-label">ADS1115 <span class="tip-hit" onclick="openTip('Conversor anal\u00f3gico-digital (ADC).\nL\u00ea as 4 entradas anal\u00f3gicas.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
+      <div class="info-row"><span class="info-label">DS3231 RTC <span class="tip-hit" onclick="openTip('Rel\u00f3gio de tempo real.\nMant\u00e9m a hora mesmo sem energia.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
+      <div class="info-row"><span class="info-label">Display <span class="tip-hit" onclick="openTip('Display OLED SSD1306 (I2C1).')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
+      <div class="info-row"><span class="info-label">Sensores 1-Wire <span class="tip-hit" onclick="openTip('Sensores de temperatura DS18B20.\nConectados ao barramento OneWire.')"><span class="tip-icon">i</span></span></span><span class="info-value">4 encontrados</span></div>
+      <div class="info-row"><span class="info-label">Modbus <span class="tip-hit" onclick="openTip('Dispositivos Modbus RTU no barramento RS-485.')"><span class="tip-icon">i</span></span></span><span class="info-value">2/2 online</span></div>
+      <div class="info-row"><span class="info-label">Expans&otilde;es <span class="tip-hit" onclick="openTip('Placas de expans\u00e3o I2C (MCP23017).\nAdicionam DI/DO extras.')"><span class="tip-icon">i</span></span></span><span class="info-value">1 placa online</span></div>
+      <div class="info-row"><span class="info-label">I2C0 <span class="tip-hit" onclick="openTip('Barramento I2C0: MCP23017, ADS1115, DS3231.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
+      <div class="info-row"><span class="info-label">I2C1 <span class="tip-hit" onclick="openTip('Barramento I2C1: Display + placas de expans\u00e3o.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
+    </div>
+  </div>
+
+  <!-- Boot Milestones -->
+  <div class="card">
+    <div class="panel-head">
+      <h2 class="panel-title">Boot Milestones</h2>
+      <button class="btn">Atualizar</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:80px">Tempo (s)</th><th>Marco</th></tr></thead>
+        <tbody>
+          <tr><td>0.12</td><td>Config carregada</td></tr>
+          <tr><td>0.15</td><td>Protocol carregado</td></tr>
+          <tr><td>0.31</td><td>MCP23017 OK</td></tr>
+          <tr><td>0.34</td><td>ADS1115 OK</td></tr>
+          <tr><td>0.38</td><td>DS3231 RTC OK</td></tr>
+          <tr><td>0.52</td><td>Sensores 1-Wire</td></tr>
+          <tr><td>0.61</td><td>Servidor HTTP</td></tr>
+          <tr><td>0.72</td><td>Modbus ativo</td></tr>
+          <tr><td>0.85</td><td>Runtime pronto</td></tr>
+          <tr><td>3.21</td><td>ETH com IP</td></tr>
+          <tr><td>5.44</td><td>WiFi STA com IP</td></tr>
+          <tr><td>6.12</td><td>Cloud/App conectado</td></tr>
+          <tr><td>8.30</td><td>4G/PPP com IP</td></tr>
+          <tr><td>9.15</td><td>MQTT auxiliar conectado</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Acoes -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">A&ccedil;&otilde;es</h2></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn">Reiniciar</button>
+      <button class="btn danger">Restaurar padr&atilde;o de f&aacute;brica</button>
+    </div>
+  </div>
+
+  <!-- Senha -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Senha do Administrador</h2></div>
+    <div class="fields">
+      <div class="field span-3">
+        <div class="label">Senha atual</div>
+        <input type="password" id="adm_curr" value="" autocomplete="current-password">
+      </div>
+      <div class="field span-3">
+        <div class="label">Nova senha</div>
+        <input type="password" id="adm_new" value="" autocomplete="new-password">
+      </div>
+      <div class="field span-3">
+        <div class="label">Confirmar nova senha</div>
+        <input type="password" id="adm_new2" value="" autocomplete="new-password">
+      </div>
+      <div class="field span-3">
+        <div class="label">&nbsp;</div>
+        <div style="display:flex;align-items:center;gap:8px;min-height:34px">
+          <label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer;white-space:nowrap"><input type="checkbox" onchange="['adm_curr','adm_new','adm_new2'].forEach(id=>document.getElementById(id).type=this.checked?'text':'password')" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label>
+          <button class="btn primary" style="white-space:nowrap">Alterar senha</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

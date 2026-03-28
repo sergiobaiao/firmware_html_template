@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rede</title>
+<link rel="stylesheet" href="ui.css">
+<script src="ui.js"></script>
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab active" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="header">
+    
+    <button class="btn primary">Salvar</button>
+  </div>
+
+  <!-- LAN -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Lan</h2></div>
+    <div class="fields">
+      <div class="field span-4">
+        <div class="label">Modo</div>
+        <select id="lan_mode" onchange="document.getElementById('lan_static').style.display=this.value==='static'?'':'none';">
+          <option value="dhcp" selected>DHCP</option>
+          <option value="static">Est&aacute;tico</option>
+        </select>
+      </div>
+      <div class="field span-4">
+        <div class="label">DNS 1</div>
+        <input type="text" value="8.8.8.8">
+      </div>
+      <div class="field span-4">
+        <div class="label">DNS 2</div>
+        <input type="text" value="8.8.4.4">
+      </div>
+    </div>
+    <div id="lan_static" class="fields" style="margin-top:8px;display:none">
+      <div class="field span-4">
+        <div class="label">Endere&ccedil;o IP</div>
+        <input type="text" value="" placeholder="192.168.100.31">
+      </div>
+      <div class="field span-4">
+        <div class="label">M&aacute;scara</div>
+        <input type="text" value="" placeholder="255.255.255.0">
+      </div>
+      <div class="field span-4">
+        <div class="label">Gateway</div>
+        <input type="text" value="" placeholder="192.168.100.1">
+      </div>
+    </div>
+  </div>
+
+  <!-- Wi-Fi -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Wi-Fi</h2></div>
+    <div class="fields">
+      <div class="field span-6">
+        <div class="label">Habilitar</div>
+        <div class="switch-row">
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+          <span class="switch-label">Ativado</span>
+        </div>
+      </div>
+      <div class="field span-6">
+        <div class="label">Modo</div>
+        <select id="wifi_mode" onchange="document.getElementById('wifi_sta').style.display=this.value==='sta'?'':'none';document.getElementById('wifi_ap').style.display=this.value==='ap'?'':'none';">
+          <option value="ap">AP (Access Point)</option>
+          <option value="sta" selected>STA (Cliente)</option>
+        </select>
+      </div>
+    </div>
+    <!-- Campos STA -->
+    <div id="wifi_sta" class="fields" style="margin-top:8px">
+      <div class="field span-6">
+        <div class="label">SSID</div>
+        <input type="text" value="Daniel 2.4g">
+      </div>
+      <div class="field span-4">
+        <div class="label">Senha</div>
+        <input type="password" id="wifi_sta_pass" value="Drica33@">
+      </div>
+      <div class="field span-2">
+        <div class="label">&nbsp;</div>
+        <div class="switch-row" style="min-height:34px"><label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" onchange="document.getElementById('wifi_sta_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label></div>
+      </div>
+      <div class="field span-4">
+        <div class="label">Modo IP</div>
+        <select id="wifi_sta_ipmode" onchange="document.getElementById('wifi_sta_static').style.display=this.value==='static'?'':'none';">
+          <option value="dhcp" selected>DHCP</option>
+          <option value="static">Est&aacute;tico</option>
+        </select>
+      </div>
+      <div class="field span-4">
+        <div class="label">DNS 1</div>
+        <input type="text" value="8.8.8.8">
+      </div>
+      <div class="field span-4">
+        <div class="label">DNS 2</div>
+        <input type="text" value="8.8.4.4">
+      </div>
+    </div>
+    <!-- Campos IP estático STA -->
+    <div id="wifi_sta_static" class="fields" style="margin-top:8px;display:none">
+      <div class="field span-4">
+        <div class="label">IP</div>
+        <input type="text" value="" placeholder="192.168.0.10">
+      </div>
+      <div class="field span-4">
+        <div class="label">M&aacute;scara</div>
+        <input type="text" value="" placeholder="255.255.255.0">
+      </div>
+      <div class="field span-4">
+        <div class="label">Gateway</div>
+        <input type="text" value="" placeholder="192.168.0.1">
+      </div>
+    </div>
+    <!-- Campos AP -->
+    <div id="wifi_ap" class="fields" style="margin-top:8px;display:none">
+      <div class="field span-6">
+        <div class="label">SSID do AP (somente leitura)</div>
+        <input type="text" value="Braazi-B884-M-13CFD0" class="readonly" readonly>
+      </div>
+      <div class="field span-4">
+        <div class="label">Senha do AP</div>
+        <input type="password" id="wifi_ap_pass" value="Braazi13CFD0">
+      </div>
+      <div class="field span-2">
+        <div class="label">&nbsp;</div>
+        <div class="switch-row" style="min-height:34px"><label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" onchange="document.getElementById('wifi_ap_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label></div>
+      </div>
+      <div class="field span-12" style="font:400 12px/1.4 var(--font);color:var(--muted)">Senha padr&atilde;o do AP = Braazi + &uacute;ltimos 6 do SSID.</div>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+      <button class="btn">Buscar redes</button>
+      <span style="font:400 12px/1.4 var(--font);color:var(--muted)">Clique em &ldquo;Buscar redes&rdquo; para listar.</span>
+    </div>
+  </div>
+
+  <!-- Data e Hora -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Data e Hora</h2></div>
+    <div class="fields">
+      <div class="field span-6">
+        <div class="label">Servidor NTP <span class="tip-hit" onclick="openTip('Altera\u00e7\u00f5es de servidor NTP passam a valer no pr\u00f3ximo boot.')"><span class="tip-icon">i</span></span></div>
+        <input type="text" value="pool.ntp.org" maxlength="63">
+      </div>
+      <div class="field span-6">
+        <div class="label">Fuso hor&aacute;rio</div>
+        <select>
+          <option value="-720">UTC -12</option>
+          <option value="-660">UTC -11</option>
+          <option value="-600">UTC -10</option>
+          <option value="-540">UTC -9</option>
+          <option value="-480">UTC -8</option>
+          <option value="-420">UTC -7</option>
+          <option value="-360">UTC -6</option>
+          <option value="-300">UTC -5</option>
+          <option value="-240">UTC -4</option>
+          <option value="-180" selected>UTC -3</option>
+          <option value="-120">UTC -2</option>
+          <option value="-60">UTC -1</option>
+          <option value="0">UTC</option>
+          <option value="60">UTC +1</option>
+          <option value="120">UTC +2</option>
+          <option value="180">UTC +3</option>
+          <option value="240">UTC +4</option>
+          <option value="300">UTC +5</option>
+          <option value="360">UTC +6</option>
+          <option value="420">UTC +7</option>
+          <option value="480">UTC +8</option>
+          <option value="540">UTC +9</option>
+          <option value="600">UTC +10</option>
+          <option value="660">UTC +11</option>
+          <option value="720">UTC +12</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

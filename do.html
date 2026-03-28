@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sa&iacute;das Digitais</title>
+<link rel="stylesheet" href="ui.css">
+<script src="ui.js"></script>
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <div class="header">
+    <div></div>
+    <div style="display:flex;gap:6px">
+      <a href="ui2.html" class="btn" style="text-decoration:none">Voltar</a>
+      <button class="btn primary">Salvar</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Canais</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:50px">Canal</th>
+            <th style="width:60px">Habilitar</th>
+            <th style="width:80px">Inverter <span class="tip-hit" onclick="openTip('Inverte a l\u00f3gica f\u00edsica da sa\u00edda.\nQuando ativado, o estado l\u00f3gico ON aciona o rel\u00e9 para a posi\u00e7\u00e3o NF.')"><span class="tip-icon">i</span></span></th>
+            <th>Nome</th>
+            <th style="width:110px">Tipo <span class="tip-hit" onclick="openTip('Mantido: a sa\u00edda permanece no estado at\u00e9 ser alterada.\nMoment\u00e2neo: a sa\u00edda liga e desliga automaticamente ap\u00f3s o atraso configurado.')"><span class="tip-icon">i</span></span></th>
+            <th style="width:140px">Atraso OFF (&times;100ms) <span class="tip-hit" onclick="openTip('Tempo em m\u00faltiplos de 100ms para desligar automaticamente.\nS\u00f3 funciona no modo Moment\u00e2neo.\n0 = instant\u00e2neo.')"><span class="tip-icon">i</span></span></th>
+            <th style="width:140px">Estado padr&atilde;o <span class="tip-hit" onclick="openTip('Estado da sa\u00edda ao ligar a placa:\nDesligado = sempre come\u00e7a OFF\nLigado = sempre come\u00e7a ON\n\u00daltimo estado = restaura o estado anterior ao desligamento')"><span class="tip-icon">i</span></span></th>
+            <th style="width:140px">Intertravamento <span class="tip-hit" onclick="openTip('Grupo de intertravamento (1\u20134).\nSa\u00eddas no mesmo grupo n\u00e3o podem ficar ligadas ao mesmo tempo.\n0 = sem intertravamento.')"><span class="tip-icon">i</span></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DO1</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input type="text" value="Atuador 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Mantido</option><option>Moment&acirc;neo</option></select></td>
+            <td><input type="number" value="0" min="0" max="255" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:var(--soft-2);color:var(--muted);text-align:center" disabled></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td>
+          </tr>
+          <tr>
+            <td>DO2</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input type="text" value="Atuador 2" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Mantido</option><option>Moment&acirc;neo</option></select></td>
+            <td><input type="number" value="0" min="0" max="255" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:var(--soft-2);color:var(--muted);text-align:center" disabled></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td>
+          </tr>
+          <tr>
+            <td>DO3</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input type="text" value="Atuador 3" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent"></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Mantido</option><option>Moment&acirc;neo</option></select></td>
+            <td><input type="number" value="0" min="0" max="255" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:var(--soft-2);color:var(--muted);text-align:center" disabled></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>Desligado</option><option>Ligado</option><option selected>&Uacute;ltimo estado</option></select></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td>
+          </tr>
+          <tr>
+            <td>DO4</td>
+            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input type="text" value="" placeholder="ex: Atuador 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Mantido</option><option>Moment&acirc;neo</option></select></td>
+            <td><input type="number" value="0" min="0" max="255" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:var(--soft-2);color:var(--muted);text-align:center" disabled></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td>
+            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td>
+          </tr>
+          <tr><td>DO5</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Atuador 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Mantido</option><option>Moment&acirc;neo</option></select></td><td><input type="number" value="0" disabled style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:var(--soft-2);color:var(--muted);text-align:center"></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td></tr>
+          <tr><td>DO6</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Atuador 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Mantido</option><option>Moment&acirc;neo</option></select></td><td><input type="number" value="0" disabled style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:var(--soft-2);color:var(--muted);text-align:center"></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td></tr>
+          <tr><td>DO7</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Atuador 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Mantido</option><option>Moment&acirc;neo</option></select></td><td><input type="number" value="0" disabled style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:var(--soft-2);color:var(--muted);text-align:center"></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td></tr>
+          <tr><td>DO8</td><td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td><td><input type="text" value="" placeholder="ex: Atuador 1" maxlength="23" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent;color:var(--muted)"></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Mantido</option><option>Moment&acirc;neo</option></select></td><td><input type="number" value="0" disabled style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:var(--soft-2);color:var(--muted);text-align:center"></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Desligado</option><option>Ligado</option><option>&Uacute;ltimo estado</option></select></td><td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

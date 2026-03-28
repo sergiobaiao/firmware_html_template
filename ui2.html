@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Status</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+/* Status badges bar */
+.status-bar{display:flex;flex-wrap:nowrap;gap:8px;align-items:flex-start;overflow-x:auto;padding-bottom:2px;width:100%}
+.status-badge{
+  background:var(--card);border:1px solid var(--line);border-left:4px solid var(--primary);
+  padding:7px 10px;border-radius:8px;font:400 12.5px/1 var(--font);box-shadow:var(--shadow);white-space:nowrap;display:inline-flex;align-items:center;min-height:38px;flex:0 0 auto;
+}
+.status-badge.offline{border-left-color:var(--danger);color:var(--danger)}
+
+/* DO layout */
+.do-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.do-col{display:flex;flex-direction:column;gap:4px}
+.do-row-fw{display:grid;grid-template-columns:14px 5ch 1fr auto;align-items:center;gap:6px;font:400 14px/1.4 var(--font)}
+.do-row-fw .do-lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text)}
+.do-row-fw .do-acts{display:flex;gap:4px}
+.do-row-fw .do-acts button{padding:5px 8px;font:600 12px/1 var(--font);border-radius:8px;border:1px solid var(--primary);background:var(--primary);color:#fff;cursor:pointer}
+.do-row-fw .do-acts .off-btn{background:var(--soft);color:var(--text);border-color:var(--line)}
+.do-row-fw .do-acts .toggle-btn{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+/* AI section */
+.ai-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ai-block{padding:0}
+.ai-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.ai-name{font:600 14px/1.2 var(--font)}
+.ai-val{font:600 14px/1.2 var(--font)}
+.ai-details{font:400 12px/1.5 var(--font);color:var(--text);margin-top:6px}
+.ai-details .alert-text{color:var(--danger);font-weight:600}
+
+/* RS485 */
+.rs485-block{border:1px solid var(--line);border-radius:8px;padding:12px;background:var(--card);box-shadow:var(--shadow);margin-bottom:10px}
+.rs485-block:last-child{margin-bottom:0}
+.rs485-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.rs485-name{font:600 14px/1.2 var(--font)}
+.rs485-tw{overflow-x:auto}
+.rs485-t{width:100%;border-collapse:collapse;font:400 13px/1.3 var(--font)}
+.rs485-t th{font:600 11px/1 var(--font);color:var(--text);text-align:right;padding:4px 8px;border-bottom:2px solid var(--line);white-space:nowrap}
+.rs485-t th:first-child{text-align:left}
+.rs485-t td{padding:4px 8px;text-align:right;white-space:nowrap;border-bottom:1px solid rgba(0,0,0,.04);font-variant-numeric:tabular-nums;color:var(--text)}
+.rs485-t td:first-child{text-align:left;color:var(--text);font-size:12px}
+.rs485-t .val{font-weight:600;color:var(--text)}
+.rs485-t .unit{font-size:10px;color:var(--text);margin-left:2px}
+.rs485-toggle{font:400 11px/1 var(--font);color:var(--muted);cursor:pointer;margin-top:4px;text-align:right}
+
+/* Gear next to title */
+.title-gear{display:flex;align-items:center;gap:6px}
+.gear{font:400 14px/1 var(--font);cursor:pointer;color:var(--muted);text-decoration:none}
+.gear:hover{color:var(--primary)}
+
+@media(max-width:720px){.do-wrap{grid-template-columns:1fr}.ai-wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="tabs">
+    <a class="tab active" href="ui2.html">Status</a>
+    <a class="tab" href="network.html">Rede</a>
+    <a class="tab" href="gsm.html">Modem</a>
+    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="tab" href="expansions.html">Expans&otilde;es</a>
+    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="tab" href="system.html">Sistema</a>
+    <a class="tab" href="json.html">JSON</a>
+  </div>
+
+  <!-- ===== STATUS ===== -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">Status</h2></div>
+    <div class="status-bar">
+      <div class="status-badge">ETH: UP</div>
+      <div class="status-badge">IP: 192.168.100.31</div>
+      <div class="status-badge">WI-FI: ON STA</div>
+      <div class="status-badge">IP: 192.168.100.22</div>
+      <div class="status-badge">GSM: VIVO -61 dBm</div>
+      <div class="status-badge">IP: 100.89.7.92</div>
+      <div class="status-badge">Cloud/App: ON</div>
+      <div class="status-badge">Cloud/App Transporte: ETH</div>
+      <div class="status-badge">MQTT Aux HA: ON</div>
+    </div>
+  </div>
+
+  <!-- ===== SENSORES ===== -->
+  <div class="card">
+    <div class="panel-head">
+      <div class="title-gear"><h2 class="panel-title">Sensores</h2><a href="sensors.html" class="gear">&#9881;</a></div>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <p class="tile-title">Sensor 1</p>
+        <p class="tile-value">29.5 &deg;C</p>
+      </div>
+      <div class="tile">
+        <p class="tile-title">Sensor 2</p>
+        <p class="tile-value">29.3 &deg;C</p>
+      </div>
+      <div class="tile">
+        <p class="tile-title">Sensor 3</p>
+        <p class="tile-value">29.3 &deg;C</p>
+      </div>
+      <div class="tile">
+        <p class="tile-title">Sensor 4</p>
+        <p class="tile-value">29.1 &deg;C</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ENTRADAS DIGITAIS ===== -->
+  <div class="card">
+    <div class="panel-head">
+      <div class="title-gear"><h2 class="panel-title">Entradas Digitais (DI)</h2><a href="di.html" class="gear">&#9881;</a></div>
+    </div>
+    <div class="leds" style="grid-template-columns:repeat(5,1fr)">
+      <div class="led"><div class="dot"></div><span>DI1</span><span style="color:var(--text)">Sensor 1</span></div>
+      <div class="led"><div class="dot"></div><span>DI2</span><span style="color:var(--text)">Sensor 2</span></div>
+      <div class="led"><div class="dot"></div><span>DI3</span><span style="color:var(--text)">Sensor 3</span></div>
+      <div class="led"><div class="dot"></div><span>DI4</span></div>
+      <div class="led"><div class="dot"></div><span>DI5</span></div>
+      <div class="led"><div class="dot"></div><span>DI6</span></div>
+      <div class="led"><div class="dot"></div><span>DI7</span></div>
+      <div class="led"><div class="dot"></div><span>DI8</span></div>
+      <div class="led"><div class="dot"></div><span>DI9</span></div>
+      <div class="led"><div class="dot"></div><span>DI10</span></div>
+      <div class="led"><div class="dot"></div><span>DI11</span></div>
+      <div class="led"><div class="dot"></div><span>DI12</span></div>
+      <div class="led"><div class="dot"></div><span>DI13</span></div>
+      <div class="led"><div class="dot"></div><span>DI14</span></div>
+      <div class="led"><div class="dot"></div><span>DI15</span></div>
+      <div class="led"><div class="dot"></div><span>DI16</span></div>
+      <div class="led"><div class="dot"></div><span>DI17</span></div>
+      <div class="led"><div class="dot"></div><span>DI18</span></div>
+      <div class="led"><div class="dot"></div><span>DI19</span></div>
+      <div class="led"><div class="dot"></div><span>DI20</span></div>
+      <div class="led"><div class="dot"></div><span>DI21</span></div>
+      <div class="led"><div class="dot"></div><span>DI22</span></div>
+      <div class="led"><div class="dot"></div><span>DI23</span></div>
+      <div class="led"><div class="dot"></div><span>DI24</span></div>
+      <div class="led"><div class="dot"></div><span>DI25</span></div>
+      <div class="led"><div class="dot"></div><span>DI26</span></div>
+      <div class="led"><div class="dot"></div><span>DI27</span></div>
+      <div class="led"><div class="dot"></div><span>DI28</span></div>
+      <div class="led"><div class="dot"></div><span>DI29</span></div>
+      <div class="led"><div class="dot"></div><span>DI30</span></div>
+      <div class="led"><div class="dot"></div><span>DI31</span></div>
+      <div class="led"><div class="dot"></div><span>DI32</span></div>
+    </div>
+  </div>
+
+  <!-- ===== SAIDAS DIGITAIS ===== -->
+  <div class="card">
+    <div class="panel-head">
+      <div class="title-gear"><h2 class="panel-title">Sa&iacute;das Digitais (DO)</h2><a href="do.html" class="gear">&#9881;</a></div>
+    </div>
+    <div class="do-wrap">
+      <div class="do-col">
+        <div class="do-row-fw"><div class="dot"></div><span>DO1</span><span class="do-lbl">Atuador 1</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO2</span><span class="do-lbl">Atuador 2</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO3</span><span class="do-lbl">Atuador 3</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO4</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO5</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO6</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO7</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO8</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+      </div>
+      <div class="do-col">
+        <div class="do-row-fw"><div class="dot"></div><span>DO17</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO18</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO19</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO20</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO21</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO22</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO23</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="dot"></div><span>DO24</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ENTRADAS ANALOGICAS ===== -->
+  <div class="card">
+    <div class="panel-head">
+      <div class="title-gear"><h2 class="panel-title">Entradas Anal&oacute;gicas (AI)</h2><a href="ai.html" class="gear">&#9881;</a></div>
+    </div>
+    <div class="ai-wrap">
+      <!-- AI1 -->
+      <div class="ai-block">
+        <div class="ai-head">
+          <span class="ai-name">AI1 - Press&atilde;o Rede Sprinkler</span>
+          <span class="ai-val">7,15 bar</span>
+        </div>
+        <div class="bar"><div class="fill ok" style="width:44.7%"></div></div>
+        <div class="bar-labels"><span>0 bar</span><span>16 bar</span></div>
+        <div class="ai-details">
+          Monitoramento: -<br>
+          Sinal Eng. (Bruto): 7,15 bar<br>
+          Alertas: Min OK / Max OK
+        </div>
+      </div>
+      <!-- AI2 -->
+      <div class="ai-block">
+        <div class="ai-head">
+          <span class="ai-name">AI2</span>
+          <span class="ai-val">0</span>
+        </div>
+        <div class="bar"><div class="fill" style="width:0%"></div></div>
+        <div class="bar-labels"><span>0</span><span>100</span></div>
+        <div class="ai-details">
+          Monitoramento: -<br>
+          Sinal Eng. (Bruto): 0<br>
+          Alertas: Min OK / Max OK
+        </div>
+      </div>
+      <!-- AI3 -->
+      <div class="ai-block">
+        <div class="ai-head">
+          <span class="ai-name">AI3 - Volume RTI</span>
+          <span class="ai-val">297.581,25 litros</span>
+        </div>
+        <div class="bar"><div class="fill ok" style="width:49.6%"></div></div>
+        <div class="bar-labels"><span>0 litros</span><span>600.000 litros</span></div>
+        <div class="ai-details">
+          Monitoramento: OK<br>
+          Sinal Eng. (Bruto): 2,93 metros<br>
+          Alertas: Min OK / Max OK
+        </div>
+      </div>
+      <!-- AI4 -->
+      <div class="ai-block">
+        <div class="ai-head">
+          <span class="ai-name">AI4</span>
+          <span class="ai-val" style="color:var(--muted)">&mdash;</span>
+        </div>
+        <div class="bar"><div class="fill" style="width:0%;background:var(--line)"></div></div>
+        <div class="bar-labels"><span>0</span><span>100</span></div>
+        <div class="ai-details">
+          <span class="alert-text">Monitoramento: ABERTO</span><br>
+          Sinal Eng. (Bruto): 0<br>
+          Alertas: Min OK / Max OK
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RS485 / MODBUS ===== -->
+  <div class="card">
+    <div class="panel-head"><h2 class="panel-title">RS485 / Modbus</h2></div>
+
+    <!-- JSY-MK-354 -->
+    <div class="rs485-block">
+      <div class="rs485-header">
+        <span class="rs485-name">Endere&ccedil;o 1 &middot; JSY-MK-354</span>
+        <span class="badge on">Online</span>
+      </div>
+      <div class="rs485-tw">
+        <table class="rs485-t">
+          <thead><tr>
+            <th style="text-align:left"></th>
+            <th>Fase A</th>
+            <th>Fase B</th>
+            <th>Fase C</th>
+            <th>Total</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>Tens&atilde;o</td>
+              <td><span class="val">218.71</span><span class="unit">V</span></td>
+              <td><span class="val">226.40</span><span class="unit">V</span></td>
+              <td><span class="val">217.74</span><span class="unit">V</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Corrente</td>
+              <td><span class="val">0.70</span><span class="unit">A</span></td>
+              <td><span class="val">0.09</span><span class="unit">A</span></td>
+              <td><span class="val">2.81</span><span class="unit">A</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Pot&ecirc;ncia ativa</td>
+              <td><span class="val">89</span><span class="unit">W</span></td>
+              <td><span class="val">19</span><span class="unit">W</span></td>
+              <td><span class="val">483</span><span class="unit">W</span></td>
+              <td><span class="val" style="color:var(--text)">592</span><span class="unit">W</span></td>
+            </tr>
+            <tr>
+              <td>Pot&ecirc;ncia reativa</td>
+              <td><span class="val">56</span><span class="unit">var</span></td>
+              <td><span class="val">2</span><span class="unit">var</span></td>
+              <td><span class="val">369</span><span class="unit">var</span></td>
+              <td><span class="val" style="color:var(--text)">310</span><span class="unit">var</span></td>
+            </tr>
+            <tr>
+              <td>Pot&ecirc;ncia aparente</td>
+              <td><span class="val">153</span><span class="unit">VA</span></td>
+              <td><span class="val">20</span><span class="unit">VA</span></td>
+              <td><span class="val">610</span><span class="unit">VA</span></td>
+              <td><span class="val" style="color:var(--text)">784</span><span class="unit">VA</span></td>
+            </tr>
+            <tr>
+              <td>Fator de pot&ecirc;ncia</td>
+              <td><span class="val">0.580</span></td>
+              <td><span class="val">0.928</span></td>
+              <td><span class="val">0.789</span></td>
+              <td><span class="val" style="color:var(--text)">0.767</span></td>
+            </tr>
+            <tr>
+              <td>Energia</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="val" style="color:var(--text)">1195.57</span><span class="unit">kWh</span></td>
+            </tr>
+            <tr>
+              <td>Frequ&ecirc;ncia</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="val" style="color:var(--text)">59.97</span><span class="unit">Hz</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- JSY-MK-141G -->
+    <div class="rs485-block">
+      <div class="rs485-header">
+        <span class="rs485-name">Endere&ccedil;o 2 &middot; JSY-MK-141G</span>
+        <span class="badge on">Online</span>
+      </div>
+      <div class="rs485-tw">
+        <table class="rs485-t">
+          <thead><tr>
+            <th style="text-align:left"></th>
+            <th>CH 1</th>
+            <th>CH 2</th>
+            <th>CH 3</th>
+            <th>Total</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>Tens&atilde;o</td>
+              <td><span class="val">218.98</span><span class="unit">V</span></td>
+              <td><span class="val">226.60</span><span class="unit">V</span></td>
+              <td><span class="val">218.18</span><span class="unit">V</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Corrente</td>
+              <td><span class="val">0.01</span><span class="unit">A</span></td>
+              <td><span class="val">0.01</span><span class="unit">A</span></td>
+              <td><span class="val">0.02</span><span class="unit">A</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Pot&ecirc;ncia ativa</td>
+              <td><span class="val">2</span><span class="unit">W</span></td>
+              <td><span class="val">2</span><span class="unit">W</span></td>
+              <td><span class="val">2</span><span class="unit">W</span></td>
+              <td><span class="val" style="color:var(--text)">6</span><span class="unit">W</span></td>
+            </tr>
+            <tr>
+              <td>Fator de pot&ecirc;ncia</td>
+              <td><span class="val">0.659</span></td>
+              <td><span class="val">0.686</span></td>
+              <td><span class="val">0.854</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Energia</td>
+              <td><span class="val">116.66</span><span class="unit">kWh</span></td>
+              <td><span class="val">0.00</span><span class="unit">kWh</span></td>
+              <td><span class="val">5.59</span><span class="unit">kWh</span></td>
+              <td><span class="val" style="color:var(--text)">122.25</span><span class="unit">kWh</span></td>
+            </tr>
+            <tr>
+              <td>Frequ&ecirc;ncia</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="val" style="color:var(--text)">59.97</span><span class="unit">Hz</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rs485-toggle">Mostrar 3 canal(is) vazio(s)</div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
