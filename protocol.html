@@ -4,301 +4,301 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Integra&ccedil;&otilde;es</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 </head>
-<body>
-<div class="page">
-  <div class="tabs">
-    <a class="tab" href="ui2.html">Status</a>
-    <a class="tab" href="network.html">Rede</a>
-    <a class="tab" href="gsm.html">Modem</a>
-    <a class="tab active" href="protocol.html">Integra&ccedil;&otilde;es</a>
-    <a class="tab" href="expansions.html">Expans&otilde;es</a>
-    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
-    <a class="tab" href="system.html">Sistema</a>
-    <a class="tab" href="json.html">JSON</a>
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="max-w-[1460px] mx-auto px-5 pt-4 pb-6">
+  <div class="flex flex-wrap gap-2 mb-3">
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="ui2.html">Status</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="network.html">Rede</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="gsm.html">Modem</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="expansions.html">Expans&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="system.html">Sistema</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="json.html">JSON</a>
   </div>
 
-  <div class="topline">
-    <div class="subtabs">
-      <div class="subtab active" onclick="document.getElementById('view_srv').style.display='';document.getElementById('view_msg').style.display='none';this.classList.add('active');this.nextElementSibling.classList.remove('active')">Servi&ccedil;os</div>
-      <div class="subtab" onclick="document.getElementById('view_msg').style.display='';document.getElementById('view_srv').style.display='none';this.classList.add('active');this.previousElementSibling.classList.remove('active')">Mensagens</div>
+  <div class="flex items-center justify-between gap-2.5 flex-wrap mb-3">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <div class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" onclick="document.getElementById('view_srv').style.display='';document.getElementById('view_msg').style.display='none';this.classList.add('active');this.nextElementSibling.classList.remove('active')">Servi&ccedil;os</div>
+      <div class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" onclick="document.getElementById('view_msg').style.display='';document.getElementById('view_srv').style.display='none';this.classList.add('active');this.previousElementSibling.classList.remove('active')">Mensagens</div>
     </div>
-    <div class="actions-right">
-      <button class="btn primary">Salvar</button>
+    <div class="flex gap-1.5 ml-auto">
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Salvar</button>
     </div>
   </div>
 
   <div id="view_srv">
   <!-- Cloud/App -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Cloud / App</h2></div>
-    <div class="fields">
-      <div class="field span-12">
-        <div class="label">Habilitar</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
-          <span class="switch-label">Conex&atilde;o com o Cloud ativada</span>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Cloud / App</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Habilitar</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">Conex&atilde;o com o Cloud ativada</span>
         </div>
       </div>
-      <div class="field span-4">
-        <div class="label">Prioridade 1</div>
-        <select><option selected>Ethernet</option><option>Wi-Fi</option><option>4G Celular</option><option>Desabilitado</option></select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Prioridade 1</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>Ethernet</option><option>Wi-Fi</option><option>4G Celular</option><option>Desabilitado</option></select>
       </div>
-      <div class="field span-4">
-        <div class="label">Prioridade 2</div>
-        <select><option>Ethernet</option><option selected>Wi-Fi</option><option>4G Celular</option><option>Desabilitado</option></select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Prioridade 2</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>Ethernet</option><option selected>Wi-Fi</option><option>4G Celular</option><option>Desabilitado</option></select>
       </div>
-      <div class="field span-4">
-        <div class="label">Prioridade 3</div>
-        <select><option>Ethernet</option><option>Wi-Fi</option><option selected>4G Celular</option><option>Desabilitado</option></select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Prioridade 3</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>Ethernet</option><option>Wi-Fi</option><option selected>4G Celular</option><option>Desabilitado</option></select>
       </div>
-      <div class="field span-12">
-        <div class="label">Cloud Token</div>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Cloud Token</div>
         <div style="display:flex;gap:8px;align-items:center">
-          <input type="password" id="cloud_token" value="84vq9ebqcx7ym0wa4636" placeholder="Manter vazio para n&atilde;o alterar" style="flex:1">
-          <label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer;white-space:nowrap"><input type="checkbox" onchange="document.getElementById('cloud_token').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label>
+          <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="password" id="cloud_token" value="84vq9ebqcx7ym0wa4636" placeholder="Manter vazio para n&atilde;o alterar" style="flex:1">
+          <label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer;white-space:nowrap"><input class="" type="checkbox" onchange="document.getElementById('cloud_token').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label>
         </div>
       </div>
     </div>
   </div>
 
   <!-- RS-485 -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">RS-485 / Barramento</h2></div>
-    <div class="fields">
-      <div class="field span-12">
-        <div class="label">Habilitar</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
-          <span class="switch-label">RS-485 ativado</span>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">RS-485 / Barramento</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Habilitar</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">RS-485 ativado</span>
         </div>
       </div>
-      <div class="field span-4">
-        <div class="label">Modo de uso</div>
-        <select><option selected>Modbus RTU (mapeado)</option><option disabled>RS-485 RAW (bytes)</option></select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Modo de uso</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>Modbus RTU (mapeado)</option><option disabled>RS-485 RAW (bytes)</option></select>
       </div>
-      <div class="field span-2">
-        <div class="label">Baud</div>
-        <select><option>1200</option><option>2400</option><option>4800</option><option>9600</option><option selected>19200</option><option>38400</option><option>57600</option><option>115200</option></select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-2">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Baud</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>1200</option><option>2400</option><option>4800</option><option>9600</option><option selected>19200</option><option>38400</option><option>57600</option><option>115200</option></select>
       </div>
-      <div class="field span-2">
-        <div class="label">Paridade</div>
-        <select><option selected>N</option><option>E</option><option>O</option></select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-2">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Paridade</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>N</option><option>E</option><option>O</option></select>
       </div>
-      <div class="field span-2">
-        <div class="label">Stop bits</div>
-        <select><option selected>1</option><option>2</option></select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-2">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Stop bits</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>1</option><option>2</option></select>
       </div>
-      <div class="field span-2">
-        <div class="label">Data bits</div>
-        <input type="text" value="8" class="readonly" readonly>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-2">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Data bits</div>
+        <input type="text" value="8" class="bg-[#f9fafb] text-[#374151] min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" readonly>
       </div>
-      <div class="field span-3">
-        <div class="label">Timeout (ms)</div>
-        <input type="number" value="1000" min="50" max="60000">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Timeout (ms)</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="1000" min="50" max="60000">
       </div>
-      <div class="field span-3">
-        <div class="label">Retries</div>
-        <input type="number" value="2" min="0" max="10">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Retries</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="2" min="0" max="10">
       </div>
-      <div class="field span-3">
-        <div class="label">Poll base (ms)</div>
-        <input type="number" value="2000" min="50" max="60000">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Poll base (ms)</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="2000" min="50" max="60000">
       </div>
     </div>
     <div style="margin-top:12px">
-      <button class="btn">Gerenciar devices Modbus...</button>
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Gerenciar devices Modbus...</button>
     </div>
     <!-- Modbus devices inline -->
     <div style="margin-top:12px;border:1px solid var(--line);border-radius:10px;padding:12px">
       <div style="font:600 13px/1.2 var(--font);margin-bottom:8px">Modbus RTU Devices</div>
-      <div class="table-wrap">
+      <div class="overflow-x-visible">
         <table>
           <thead><tr><th style="width:80px">Endere&ccedil;o</th><th style="width:70px">Habilitar</th><th>Modelo</th></tr></thead>
           <tbody>
             <tr>
-              <td><input type="number" value="1" min="0" max="247" style="width:60px;text-align:center"></td>
-              <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+              <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="1" min="0" max="247" style="width:60px;text-align:center"></td>
+              <td style="text-align:center"><input class="" type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
               <td>
-                <select><option>---</option><option selected>JSY-MK-354</option><option>JSY-MK-141G</option><option>Cummins InPower</option><option>ECP-1000</option><option>SEC-PM</option></select>
+                <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>---</option><option selected>JSY-MK-354</option><option>JSY-MK-141G</option><option>Cummins InPower</option><option>ECP-1000</option><option>SEC-PM</option></select>
                 <details style="margin-top:6px;border-top:1px dashed var(--line);padding-top:6px">
                   <summary style="cursor:pointer;font:600 12px/1.2 var(--font);color:var(--muted);list-style:none">Configurar leituras (avan&ccedil;ado)</summary>
                   <div style="margin-top:8px">
-                    <div class="switch-row"><label class="switch"><input type="checkbox" checked><span class="slider"></span></label><span class="switch-label">Medi&ccedil;&otilde;es el&eacute;tricas (r&aacute;pido): tens&atilde;o, corrente, pot&ecirc;ncias, frequ&ecirc;ncia e fator de pot&ecirc;ncia</span></div>
-                    <div class="switch-row" style="margin-top:6px"><label class="switch"><input type="checkbox" checked><span class="slider"></span></label><span class="switch-label">Energia e status (lento): kWh/kvarh/kVAh, direto/reverso e alarmes</span></div>
+                    <div class="flex min-h-8 items-center gap-2"><label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label><span class="text-[13px] leading-[1.2]">Medi&ccedil;&otilde;es el&eacute;tricas (r&aacute;pido): tens&atilde;o, corrente, pot&ecirc;ncias, frequ&ecirc;ncia e fator de pot&ecirc;ncia</span></div>
+                    <div class="flex min-h-8 items-center gap-2" style="margin-top:6px"><label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label><span class="text-[13px] leading-[1.2]">Energia e status (lento): kWh/kvarh/kVAh, direto/reverso e alarmes</span></div>
                   </div>
                 </details>
               </td>
             </tr>
             <tr>
-              <td><input type="number" value="2" min="0" max="247" style="width:60px;text-align:center"></td>
-              <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+              <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="2" min="0" max="247" style="width:60px;text-align:center"></td>
+              <td style="text-align:center"><input class="" type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
               <td>
-                <select><option>---</option><option>JSY-MK-354</option><option selected>JSY-MK-141G</option><option>Cummins InPower</option><option>ECP-1000</option><option>SEC-PM</option></select>
+                <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>---</option><option>JSY-MK-354</option><option selected>JSY-MK-141G</option><option>Cummins InPower</option><option>ECP-1000</option><option>SEC-PM</option></select>
                 <details style="margin-top:6px;border-top:1px dashed var(--line);padding-top:6px">
                   <summary style="cursor:pointer;font:600 12px/1.2 var(--font);color:var(--muted);list-style:none">Configurar leituras (avan&ccedil;ado)</summary>
                   <div style="margin-top:8px">
-                    <div class="switch-row"><label class="switch"><input type="checkbox" checked><span class="slider"></span></label><span class="switch-label">Medi&ccedil;&otilde;es el&eacute;tricas (r&aacute;pido)</span></div>
-                    <div class="switch-row" style="margin-top:6px"><label class="switch"><input type="checkbox" checked><span class="slider"></span></label><span class="switch-label">Energia e status (lento)</span></div>
+                    <div class="flex min-h-8 items-center gap-2"><label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label><span class="text-[13px] leading-[1.2]">Medi&ccedil;&otilde;es el&eacute;tricas (r&aacute;pido)</span></div>
+                    <div class="flex min-h-8 items-center gap-2" style="margin-top:6px"><label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label><span class="text-[13px] leading-[1.2]">Energia e status (lento)</span></div>
                   </div>
                 </details>
               </td>
             </tr>
             <tr>
-              <td><input type="number" value="0" min="0" max="247" style="width:60px;text-align:center"></td>
-              <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-              <td><select><option selected>---</option><option>JSY-MK-354</option><option>JSY-MK-141G</option><option>Cummins InPower</option><option>ECP-1000</option><option>SEC-PM</option></select></td>
+              <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="0" min="0" max="247" style="width:60px;text-align:center"></td>
+              <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+              <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>---</option><option>JSY-MK-354</option><option>JSY-MK-141G</option><option>Cummins InPower</option><option>ECP-1000</option><option>SEC-PM</option></select></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div style="margin-top:8px"><button class="btn primary">Salvar devices</button></div>
+      <div style="margin-top:8px"><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Salvar devices</button></div>
     </div>
   </div>
 
   <!-- MQTT Auxiliar -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">MQTT Auxiliar</h2></div>
-    <div class="fields">
-      <div class="field span-4">
-        <div class="label">Modo</div>
-        <select>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">MQTT Auxiliar</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Modo</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]">
           <option>Desabilitado</option>
           <option>Local</option>
           <option selected>Home Assistant</option>
         </select>
       </div>
-      <div class="field span-12">
-        <div class="label">Auto discovery</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
-          <span class="switch-label">Ativado</span>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Auto discovery</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">Ativado</span>
         </div>
       </div>
-      <div class="field span-6">
-        <div class="label">Nome do dispositivo</div>
-        <input type="text" value="B884M-13CFD0">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Nome do dispositivo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="B884M-13CFD0">
       </div>
-      <div class="field span-4">
-        <div class="label">Host</div>
-        <input type="text" value="192.168.100.10">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Host</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="192.168.100.10">
       </div>
-      <div class="field span-2">
-        <div class="label">Porta</div>
-        <input type="number" value="1883" min="1" max="65535">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-2">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Porta</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="1883" min="1" max="65535">
       </div>
-      <div class="field span-6">
-        <div class="label">Usu&aacute;rio</div>
-        <input type="text" value="homeassistant">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Usu&aacute;rio</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="homeassistant">
       </div>
-      <div class="field span-4">
-        <div class="label">Senha</div>
-        <input type="password" id="mqtt_ha_pass" value="" placeholder="Manter vazio para n&atilde;o alterar">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Senha</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="password" id="mqtt_ha_pass" value="" placeholder="Manter vazio para n&atilde;o alterar">
       </div>
-      <div class="field span-2">
-        <div class="label">&nbsp;</div>
-        <div class="switch-row" style="min-height:34px"><label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" onchange="document.getElementById('mqtt_ha_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label></div>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-2">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">&nbsp;</div>
+        <div class="flex min-h-8 items-center gap-2" style="min-height:34px"><label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input class="" type="checkbox" onchange="document.getElementById('mqtt_ha_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label></div>
       </div>
     </div>
   </div>
 
   <!-- TCP Server -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">TCP Server</h2></div>
-    <div class="fields">
-      <div class="field span-12">
-        <div class="label">Habilitar</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox"><span class="slider"></span></label>
-          <span class="switch-label">Desativado</span>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">TCP Server</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Habilitar</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox"><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">Desativado</span>
         </div>
       </div>
-      <div class="field span-4">
-        <div class="label">Porta</div>
-        <input type="number" value="502" min="1" max="65535">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Porta</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="502" min="1" max="65535">
       </div>
-      <div class="field span-4">
-        <div class="label">M&aacute;x. conex&otilde;es</div>
-        <input type="number" value="4" min="1" max="8">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">M&aacute;x. conex&otilde;es</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="4" min="1" max="8">
       </div>
-      <div class="field span-4">
-        <div class="label">Delimitador</div>
-        <select><option selected>\r\n (CRLF)</option><option>\n (LF)</option></select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Delimitador</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>\r\n (CRLF)</option><option>\n (LF)</option></select>
       </div>
     </div>
   </div>
 
   <!-- TCP Client -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">TCP Client</h2></div>
-    <div class="fields">
-      <div class="field span-12">
-        <div class="label">Habilitar</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox"><span class="slider"></span></label>
-          <span class="switch-label">Desativado</span>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">TCP Client</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Habilitar</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox"><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">Desativado</span>
         </div>
       </div>
-      <div class="field span-4">
-        <div class="label">Host</div>
-        <input type="text" value="">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Host</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="">
       </div>
-      <div class="field span-4">
-        <div class="label">Porta</div>
-        <input type="number" value="502" min="1" max="65535">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Porta</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="502" min="1" max="65535">
       </div>
-      <div class="field span-4">
-        <div class="label">Timeout (ms)</div>
-        <input type="number" value="5000" min="50" max="60000">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Timeout (ms)</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="5000" min="50" max="60000">
       </div>
     </div>
   </div>
 
   <!-- UDP Server -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">UDP Server</h2></div>
-    <div class="fields">
-      <div class="field span-12">
-        <div class="label">Habilitar</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox"><span class="slider"></span></label>
-          <span class="switch-label">Desativado</span>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">UDP Server</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Habilitar</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox"><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">Desativado</span>
         </div>
       </div>
-      <div class="field span-6">
-        <div class="label">Porta</div>
-        <input type="number" value="5000" min="1" max="65535">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Porta</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="5000" min="1" max="65535">
       </div>
-      <div class="field span-6">
-        <div class="label">Filtro de origem (opcional)</div>
-        <input type="text" value="" placeholder="ex: 192.168.0.0/24">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Filtro de origem (opcional)</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="ex: 192.168.0.0/24">
       </div>
     </div>
   </div>
 
   <!-- UDP Client -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">UDP Client</h2></div>
-    <div class="fields">
-      <div class="field span-12">
-        <div class="label">Habilitar</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox"><span class="slider"></span></label>
-          <span class="switch-label">Desativado</span>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">UDP Client</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Habilitar</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox"><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">Desativado</span>
         </div>
       </div>
-      <div class="field span-4">
-        <div class="label">Host</div>
-        <input type="text" value="">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Host</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="">
       </div>
-      <div class="field span-4">
-        <div class="label">Porta</div>
-        <input type="number" value="5000" min="1" max="65535">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Porta</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="5000" min="1" max="65535">
       </div>
-      <div class="field span-4">
-        <div class="label">TTL (opcional)</div>
-        <input type="number" value="" min="1" max="255">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">TTL (opcional)</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="" min="1" max="255">
       </div>
     </div>
   </div>
@@ -307,12 +307,12 @@
 
   <div id="view_msg" style="display:none">
   <!-- Mensagens personalizadas -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Mensagens personalizadas (por ID)</h2></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Mensagens personalizadas (por ID)</h2></div>
     <div style="font:400 12px/1.4 var(--font);color:var(--muted);margin-bottom:12px">Servi&ccedil;os configuram portas/hosts. Mensagens por ID definem o que enviar/receber.</div>
 
     <div style="font:600 13px/1.2 var(--font);margin-bottom:8px">Sa&iacute;da &mdash; Enviar mensagens (para usar em ENT&Atilde;O)</div>
-    <div class="table-wrap">
+    <div class="overflow-x-visible">
       <table>
         <thead><tr>
           <th style="width:36px">ID</th>
@@ -325,34 +325,34 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Client</option><option>UDP Client</option><option disabled>RS-485 (RAW)</option><option>HTTP GET</option><option>HTTP POST</option></select></td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Conte&uacute;do..."></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="(opcional)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Client</option><option>UDP Client</option><option disabled>RS-485 (RAW)</option><option>HTTP GET</option><option>HTTP POST</option></select></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Conte&uacute;do..."></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="(opcional)"></td>
           </tr>
           <tr>
             <td>2</td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Client</option><option>UDP Client</option><option disabled>RS-485 (RAW)</option><option>HTTP GET</option><option>HTTP POST</option></select></td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Conte&uacute;do..."></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="(opcional)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Client</option><option>UDP Client</option><option disabled>RS-485 (RAW)</option><option>HTTP GET</option><option>HTTP POST</option></select></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Conte&uacute;do..."></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="(opcional)"></td>
           </tr>
           <tr>
             <td>3</td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Client</option><option>UDP Client</option><option disabled>RS-485 (RAW)</option><option>HTTP GET</option><option>HTTP POST</option></select></td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Conte&uacute;do..."></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="(opcional)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Client</option><option>UDP Client</option><option disabled>RS-485 (RAW)</option><option>HTTP GET</option><option>HTTP POST</option></select></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Conte&uacute;do..."></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="(opcional)"></td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <div style="font:600 13px/1.2 var(--font);margin:16px 0 8px">Entrada &mdash; Receber mensagens (para usar em SE)</div>
-    <div class="table-wrap">
+    <div class="overflow-x-visible">
       <table>
         <thead><tr>
           <th style="width:36px">ID</th>
@@ -365,27 +365,27 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Server</option><option>UDP Server</option><option disabled>RS-485 (RAW)</option></select></td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Texto..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Exato (trim)</option></select></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Server</option><option>UDP Server</option><option disabled>RS-485 (RAW)</option></select></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Texto..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Exato (trim)</option></select></td>
           </tr>
           <tr>
             <td>2</td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Server</option><option>UDP Server</option><option disabled>RS-485 (RAW)</option></select></td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Texto..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Exato (trim)</option></select></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Server</option><option>UDP Server</option><option disabled>RS-485 (RAW)</option></select></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Texto..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Exato (trim)</option></select></td>
           </tr>
           <tr>
             <td>3</td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Server</option><option>UDP Server</option><option disabled>RS-485 (RAW)</option></select></td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><input type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Texto..."></td>
-            <td><select style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Exato (trim)</option></select></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Nome..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option>TCP Server</option><option>UDP Server</option><option disabled>RS-485 (RAW)</option></select></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" style="border:none;padding:4px 0;min-height:auto;border-radius:0;background:transparent" placeholder="Texto..."></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" style="border:none;padding:2px;min-height:auto;border-radius:0;background:transparent;font-size:13px"><option selected>Exato (trim)</option></select></td>
           </tr>
         </tbody>
       </table>

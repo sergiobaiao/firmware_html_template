@@ -4,40 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Expans&otilde;es</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 <script src="ui.js"></script>
 </head>
-<body>
-<div class="page">
-  <div class="tabs">
-    <a class="tab" href="ui2.html">Status</a>
-    <a class="tab" href="network.html">Rede</a>
-    <a class="tab" href="gsm.html">Modem</a>
-    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
-    <a class="tab active" href="expansions.html">Expans&otilde;es</a>
-    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
-    <a class="tab" href="system.html">Sistema</a>
-    <a class="tab" href="json.html">JSON</a>
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="max-w-[1460px] mx-auto px-5 pt-4 pb-6">
+  <div class="flex flex-wrap gap-2 mb-3">
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="ui2.html">Status</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="network.html">Rede</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="gsm.html">Modem</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" href="expansions.html">Expans&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="system.html">Sistema</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="json.html">JSON</a>
   </div>
 
-  <div class="header">
+  <div class="flex items-end justify-end gap-2.5 mb-2.5 flex-wrap">
     
     <div style="display:flex;gap:6px">
-      <button class="btn">Procurar placas</button>
-      <button class="btn primary">Salvar</button>
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Procurar placas</button>
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Salvar</button>
     </div>
   </div>
 
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Placas de Expan&ccedil;&atilde;o</h2></div>
-    <div class="table-wrap">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Placas de Expan&ccedil;&atilde;o</h2></div>
+    <div class="overflow-x-visible">
       <table>
         <thead>
           <tr>
             <th style="width:50px">Slot</th>
             <th style="width:70px">Habilitar</th>
-            <th style="width:160px">Modelo <span class="tip-hit" onclick="openTip('Modelo da placa de expans\u00e3o.\nB88-I2C: 8 DI + 8 DO via MCP23017.')"><span class="tip-icon">i</span></span></th>
-            <th style="width:120px">Endere&ccedil;o I2C <span class="tip-hit" onclick="openTip('Endere\u00e7o I2C do MCP23017.\nCada placa deve ter um endere\u00e7o \u00fanico (0x20\u20130x27).\nUse \u201cProcurar placas\u201d para detectar automaticamente.')"><span class="tip-icon">i</span></span></th>
+            <th style="width:160px">Modelo <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Modelo da placa de expans\u00e3o.\nB88-I2C: 8 DI + 8 DO via MCP23017.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></th>
+            <th style="width:120px">Endere&ccedil;o I2C <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Endere\u00e7o I2C do MCP23017.\nCada placa deve ter um endere\u00e7o \u00fanico (0x20\u20130x27).\nUse \u201cProcurar placas\u201d para detectar automaticamente.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></th>
             <th>Nome</th>
             <th style="width:100px">Status</th>
           </tr>
@@ -45,34 +45,34 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><select><option>Nenhum</option><option selected>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
-            <td><select><option selected>0x20</option><option>0x21</option><option>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
-            <td><input type="text" value="Painel 1" maxlength="23" placeholder="ex: Casa de bombas"></td>
-            <td><span class="badge on">Online</span></td>
+            <td style="text-align:center"><input class="" type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>Nenhum</option><option selected>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>0x20</option><option>0x21</option><option>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="Painel 1" maxlength="23" placeholder="ex: Casa de bombas"></td>
+            <td><span class="badge !bg-[#16a34a]">Online</span></td>
           </tr>
           <tr>
             <td>2</td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><select><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
-            <td><select><option>0x20</option><option selected>0x21</option><option>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
-            <td><input type="text" value="" placeholder="Nome..." maxlength="23" ></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>0x20</option><option selected>0x21</option><option>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="Nome..." maxlength="23" ></td>
             <td><span class="badge">&mdash;</span></td>
           </tr>
           <tr>
             <td>3</td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><select><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
-            <td><select><option>0x20</option><option>0x21</option><option selected>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
-            <td><input type="text" value="" placeholder="Nome..." maxlength="23" ></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>0x20</option><option>0x21</option><option selected>0x22</option><option>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="Nome..." maxlength="23" ></td>
             <td><span class="badge">&mdash;</span></td>
           </tr>
           <tr>
             <td>4</td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
-            <td><select><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
-            <td><select><option>0x20</option><option>0x21</option><option>0x22</option><option selected>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
-            <td><input type="text" value="" placeholder="Nome..." maxlength="23" ></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option selected>Nenhum</option><option>B88-I2C</option><option disabled>B4AI-I2C (em breve)</option><option disabled>B8AO-I2C (em breve)</option></select></td>
+            <td><select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]"><option>0x20</option><option>0x21</option><option>0x22</option><option selected>0x23</option><option>0x24</option><option>0x25</option><option>0x26</option><option>0x27</option></select></td>
+            <td><input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="Nome..." maxlength="23" ></td>
             <td><span class="badge">&mdash;</span></td>
           </tr>
         </tbody>

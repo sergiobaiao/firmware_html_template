@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sistema</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 <script src="ui.js"></script>
 <style>
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px}
@@ -15,31 +15,31 @@
 @media(max-width:860px){.info-grid{grid-template-columns:1fr}}
 </style>
 </head>
-<body>
-<div class="page">
-  <div class="tabs">
-    <a class="tab" href="ui2.html">Status</a>
-    <a class="tab" href="network.html">Rede</a>
-    <a class="tab" href="gsm.html">Modem</a>
-    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
-    <a class="tab" href="expansions.html">Expans&otilde;es</a>
-    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
-    <a class="tab active" href="system.html">Sistema</a>
-    <a class="tab" href="json.html">JSON</a>
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="max-w-[1460px] mx-auto px-5 pt-4 pb-6">
+  <div class="flex flex-wrap gap-2 mb-3">
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="ui2.html">Status</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="network.html">Rede</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="gsm.html">Modem</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="expansions.html">Expans&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" href="system.html">Sistema</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="json.html">JSON</a>
   </div>
 
-  <div class="header">
-    <button class="btn primary">Salvar</button>
+  <div class="flex items-end justify-end gap-2.5 mb-2.5 flex-wrap">
+    <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Salvar</button>
   </div>
 
 
   <!-- Aparência -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Aparência</h2></div>
-    <div class="fields">
-      <div class="field span-4">
-        <label class="label" for="theme-select">Tema</label>
-        <select id="theme-select">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Aparência</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <label class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]" for="theme-select">Tema</label>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" id="theme-select">
           <option value="0">Automático</option>
           <option value="1">B884 Default Blue</option>
           <option value="2">Cloud Dancer (2026)</option>
@@ -52,95 +52,95 @@
           <option value="9">Lava Core</option>
           <option value="10">Corporate Steel</option>
         </select>
-        <div class="theme-preview-note">Automático usa claro no tema 1 e escuro no tema 3.</div>
+        <div class="mt-1 text-[12px] leading-[1.35] text-[#6b7280]">Automático usa claro no tema 1 e escuro no tema 3.</div>
       </div>
     </div>
   </div>
 
 
   <!-- Dispositivo -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Dispositivo</h2></div>
-    <div class="info-grid">
-      <div class="info-row"><span class="info-label">Modelo</span><span class="info-value">B884-M</span></div>
-      <div class="info-row"><span class="info-label">Device ID</span><span class="info-value">13CFD0</span></div>
-      <div class="info-row"><span class="info-label">MAC12</span><span class="info-value">CFD0</span></div>
-      <div class="info-row"><span class="info-label">AP SSID</span><span class="info-value">Braazi-B884-M-13CFD0</span></div>
-      <div class="info-row"><span class="info-label">Firmware</span><span class="info-value">1.6.0</span></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Dispositivo</h2></div>
+    <div class="grid grid-cols-2 gap-y-1 gap-x-4">
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Modelo</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">B884-M</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Device ID</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">13CFD0</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">MAC12</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">CFD0</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">AP SSID</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">Braazi-B884-M-13CFD0</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Firmware</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">1.6.0</span></div>
     </div>
   </div>
 
   <!-- Saude do Sistema -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Sa&uacute;de do Sistema</h2></div>
-    <div class="info-grid">
-      <div class="info-row"><span class="info-label">Mem&oacute;ria interna (DRAM) <span class="tip-hit" onclick="openTip('Mem\u00f3ria principal do ESP32.\n> 40 KB = saud\u00e1vel\n25\u201340 KB = aten\u00e7\u00e3o\n< 25 KB = cr\u00edtico')"><span class="tip-icon">i</span></span></span><span class="info-value">48.2 KB</span></div>
-      <div class="info-row"><span class="info-label">DRAM m&iacute;nima <span class="tip-hit" onclick="openTip('Menor valor de DRAM livre desde o boot.\nIndica pico de uso de mem\u00f3ria.')"><span class="tip-icon">i</span></span></span><span class="info-value">35.1 KB</span></div>
-      <div class="info-row"><span class="info-label">Maior bloco DRAM <span class="tip-hit" onclick="openTip('Maior bloco cont\u00edguo de DRAM dispon\u00edvel.\nValor muito abaixo do total indica fragmenta\u00e7\u00e3o.')"><span class="tip-icon">i</span></span></span><span class="info-value">32.0 KB</span></div>
-      <div class="info-row"><span class="info-label">PSRAM <span class="tip-hit" onclick="openTip('Mem\u00f3ria PSRAM externa (8 MB).\nUsada para buffers grandes.\nMenos cr\u00edtica que DRAM.')"><span class="tip-icon">i</span></span></span><span class="info-value">7.8 MB</span></div>
-      <div class="info-row"><span class="info-label">Heap total <span class="tip-hit" onclick="openTip('Soma de DRAM + PSRAM livres.\nDRAM \u00e9 mais cr\u00edtica que PSRAM.')"><span class="tip-icon">i</span></span></span><span class="info-value">8.1 MB</span></div>
-      <div class="info-row"><span class="info-label">Pico do loop <span class="tip-hit" onclick="openTip('Tempo m\u00e1ximo do loop principal.\n< 50 ms = bom\n50\u2013100 ms = aten\u00e7\u00e3o\n> 100 ms = investigar')"><span class="tip-icon">i</span></span></span><span class="info-value">12 ms</span></div>
-      <div class="info-row"><span class="info-label">Loop atual <span class="tip-hit" onclick="openTip('Tempo da \u00faltima itera\u00e7\u00e3o do loop principal.')"><span class="tip-icon">i</span></span></span><span class="info-value">3 ms</span></div>
-      <div class="info-row"><span class="info-label">Recovery <span class="tip-hit" onclick="openTip('Est\u00e1gios de recovery autom\u00e1tico:\n\u2265 3 boots = AP+STA for\u00e7ado\n\u2265 6 boots = PPP/MQTT Cloud/HA desligados\n\u2265 10 boots = modo seguro (PPP/MQTT/Modbus desligados; IO local preservado)\nO contador zera ap\u00f3s 60s de uptime est\u00e1vel.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
-      <div class="info-row"><span class="info-label">Boot Count <span class="tip-hit" onclick="openTip('Contador de boots consecutivos sem estabiliza\u00e7\u00e3o.\nZera ap\u00f3s 60s de uptime est\u00e1vel.')"><span class="tip-icon">i</span></span></span><span class="info-value">1</span></div>
-      <div class="info-row"><span class="info-label">Fila DO <span class="tip-hit" onclick="openTip('Comandos pendentes na fila de sa\u00eddas digitais.\nIdeal: 0.')"><span class="tip-icon">i</span></span></span><span class="info-value">0</span></div>
-      <div class="info-row"><span class="info-label">Uptime <span class="tip-hit" onclick="openTip('Tempo desde o \u00faltimo boot.')"><span class="tip-icon">i</span></span></span><span class="info-value">2d 14h 33m</span></div>
-      <div class="info-row"><span class="info-label">OTA <span class="tip-hit" onclick="openTip('Estado da atualiza\u00e7\u00e3o remota de firmware (OTA).')"><span class="tip-icon">i</span></span></span><span class="info-value">Idle</span></div>
-      <div class="info-row"><span class="info-label">Requisi&ccedil;&otilde;es HTTP</span><span class="info-value">1.284</span></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Sa&uacute;de do Sistema</h2></div>
+    <div class="grid grid-cols-2 gap-y-1 gap-x-4">
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Mem&oacute;ria interna (DRAM) <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Mem\u00f3ria principal do ESP32.\n> 40 KB = saud\u00e1vel\n25\u201340 KB = aten\u00e7\u00e3o\n< 25 KB = cr\u00edtico')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">48.2 KB</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">DRAM m&iacute;nima <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Menor valor de DRAM livre desde o boot.\nIndica pico de uso de mem\u00f3ria.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">35.1 KB</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Maior bloco DRAM <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Maior bloco cont\u00edguo de DRAM dispon\u00edvel.\nValor muito abaixo do total indica fragmenta\u00e7\u00e3o.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">32.0 KB</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">PSRAM <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Mem\u00f3ria PSRAM externa (8 MB).\nUsada para buffers grandes.\nMenos cr\u00edtica que DRAM.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">7.8 MB</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Heap total <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Soma de DRAM + PSRAM livres.\nDRAM \u00e9 mais cr\u00edtica que PSRAM.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">8.1 MB</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Pico do loop <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Tempo m\u00e1ximo do loop principal.\n< 50 ms = bom\n50\u2013100 ms = aten\u00e7\u00e3o\n> 100 ms = investigar')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">12 ms</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Loop atual <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Tempo da \u00faltima itera\u00e7\u00e3o do loop principal.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">3 ms</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Recovery <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Est\u00e1gios de recovery autom\u00e1tico:\n\u2265 3 boots = AP+STA for\u00e7ado\n\u2265 6 boots = PPP/MQTT Cloud/HA desligados\n\u2265 10 boots = modo seguro (PPP/MQTT/Modbus desligados; IO local preservado)\nO contador zera ap\u00f3s 60s de uptime est\u00e1vel.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">OK</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Boot Count <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Contador de boots consecutivos sem estabiliza\u00e7\u00e3o.\nZera ap\u00f3s 60s de uptime est\u00e1vel.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">1</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Fila DO <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Comandos pendentes na fila de sa\u00eddas digitais.\nIdeal: 0.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">0</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Uptime <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Tempo desde o \u00faltimo boot.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">2d 14h 33m</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">OTA <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Estado da atualiza\u00e7\u00e3o remota de firmware (OTA).')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">Idle</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Requisi&ccedil;&otilde;es HTTP</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">1.284</span></div>
     </div>
   </div>
 
   <!-- Data e Hora -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Data e Hora</h2></div>
-    <div class="info-grid">
-      <div class="info-row"><span class="info-label">Hora da placa <span class="tip-hit" onclick="openTip('Hora local do dispositivo, com fuso hor\u00e1rio aplicado.')"><span class="tip-icon">i</span></span></span><span class="info-value">27/03/2026 18:45:12</span></div>
-      <div class="info-row"><span class="info-label">Fuso hor&aacute;rio</span><span class="info-value">UTC-3</span></div>
-      <div class="info-row"><span class="info-label">Origem da hora <span class="tip-hit" onclick="openTip('Fontes poss\u00edveis:\nNTP = sincronizado via internet\nRTC = rel\u00f3gio interno DS3231\nBrowser = sincronizado pelo navegador\nDegradado = RTC sem confirma\u00e7\u00e3o de precis\u00e3o')"><span class="tip-icon">i</span></span></span><span class="info-value">NTP</span></div>
-      <div class="info-row"><span class="info-label">&Uacute;ltima sincroniza&ccedil;&atilde;o <span class="tip-hit" onclick="openTip('Momento da \u00faltima sincroniza\u00e7\u00e3o de hora bem-sucedida.')"><span class="tip-icon">i</span></span></span><span class="info-value">27/03/2026 18:30:00</span></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Data e Hora</h2></div>
+    <div class="grid grid-cols-2 gap-y-1 gap-x-4">
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Hora da placa <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Hora local do dispositivo, com fuso hor\u00e1rio aplicado.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">27/03/2026 18:45:12</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Fuso hor&aacute;rio</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">UTC-3</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Origem da hora <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Fontes poss\u00edveis:\nNTP = sincronizado via internet\nRTC = rel\u00f3gio interno DS3231\nBrowser = sincronizado pelo navegador\nDegradado = RTC sem confirma\u00e7\u00e3o de precis\u00e3o')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">NTP</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">&Uacute;ltima sincroniza&ccedil;&atilde;o <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Momento da \u00faltima sincroniza\u00e7\u00e3o de hora bem-sucedida.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">27/03/2026 18:30:00</span></div>
     </div>
-    <div style="margin-top:12px"><button class="btn">Sincronizar hora do navegador</button></div>
+    <div style="margin-top:12px"><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Sincronizar hora do navegador</button></div>
   </div>
 
   <!-- Rede -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Rede</h2></div>
-    <div class="info-grid">
-      <div class="info-row"><span class="info-label">ETH</span><span class="info-value">Link &mdash; 192.168.100.31</span></div>
-      <div class="info-row"><span class="info-label">WiFi STA</span><span class="info-value">Conectado &mdash; 192.168.100.22</span></div>
-      <div class="info-row"><span class="info-label">4G/PPP</span><span class="info-value">Ativo &mdash; 100.89.7.92</span></div>
-      <div class="info-row"><span class="info-label">Sinal GSM <span class="tip-hit" onclick="openTip('N\u00edvel de sinal GSM:\n> -70 dBm = Excelente\n-70 a -85 dBm = Bom\n-85 a -100 dBm = Regular\n< -100 dBm = Fraco')"><span class="tip-icon">i</span></span></span><span class="info-value">-61 dBm (Excelente)</span></div>
-      <div class="info-row"><span class="info-label">Operadora</span><span class="info-value">Vivo</span></div>
-      <div class="info-row"><span class="info-label">Cloud/App</span><span class="info-value">Conectado</span></div>
-      <div class="info-row"><span class="info-label">Cloud/App transporte</span><span class="info-value">ETH</span></div>
-      <div class="info-row"><span class="info-label">MQTT Auxiliar</span><span class="info-value">HA Conectado</span></div>
-      <div class="info-row"><span class="info-label">MQTT Auxiliar transporte</span><span class="info-value">ETH</span></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Rede</h2></div>
+    <div class="grid grid-cols-2 gap-y-1 gap-x-4">
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">ETH</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">Link &mdash; 192.168.100.31</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">WiFi STA</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">Conectado &mdash; 192.168.100.22</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">4G/PPP</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">Ativo &mdash; 100.89.7.92</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Sinal GSM <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('N\u00edvel de sinal GSM:\n> -70 dBm = Excelente\n-70 a -85 dBm = Bom\n-85 a -100 dBm = Regular\n< -100 dBm = Fraco')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">-61 dBm (Excelente)</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Operadora</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">Vivo</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Cloud/App</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">Conectado</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Cloud/App transporte</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">ETH</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">MQTT Auxiliar</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">HA Conectado</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">MQTT Auxiliar transporte</span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">ETH</span></div>
     </div>
   </div>
 
   <!-- Hardware -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Hardware</h2></div>
-    <div class="info-grid">
-      <div class="info-row"><span class="info-label">MCP23017 <span class="tip-hit" onclick="openTip('Expansor de IO I2C.\nControla DI/DO das placas de expans\u00e3o.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
-      <div class="info-row"><span class="info-label">ADS1115 <span class="tip-hit" onclick="openTip('Conversor anal\u00f3gico-digital (ADC).\nL\u00ea as 4 entradas anal\u00f3gicas.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
-      <div class="info-row"><span class="info-label">DS3231 RTC <span class="tip-hit" onclick="openTip('Rel\u00f3gio de tempo real.\nMant\u00e9m a hora mesmo sem energia.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
-      <div class="info-row"><span class="info-label">Display <span class="tip-hit" onclick="openTip('Display OLED SSD1306 (I2C1).')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
-      <div class="info-row"><span class="info-label">Sensores 1-Wire <span class="tip-hit" onclick="openTip('Sensores de temperatura DS18B20.\nConectados ao barramento OneWire.')"><span class="tip-icon">i</span></span></span><span class="info-value">4 encontrados</span></div>
-      <div class="info-row"><span class="info-label">Modbus <span class="tip-hit" onclick="openTip('Dispositivos Modbus RTU no barramento RS-485.')"><span class="tip-icon">i</span></span></span><span class="info-value">2/2 online</span></div>
-      <div class="info-row"><span class="info-label">Expans&otilde;es <span class="tip-hit" onclick="openTip('Placas de expans\u00e3o I2C (MCP23017).\nAdicionam DI/DO extras.')"><span class="tip-icon">i</span></span></span><span class="info-value">1 placa online</span></div>
-      <div class="info-row"><span class="info-label">I2C0 <span class="tip-hit" onclick="openTip('Barramento I2C0: MCP23017, ADS1115, DS3231.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
-      <div class="info-row"><span class="info-label">I2C1 <span class="tip-hit" onclick="openTip('Barramento I2C1: Display + placas de expans\u00e3o.')"><span class="tip-icon">i</span></span></span><span class="info-value">OK</span></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Hardware</h2></div>
+    <div class="grid grid-cols-2 gap-y-1 gap-x-4">
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">MCP23017 <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Expansor de IO I2C.\nControla DI/DO das placas de expans\u00e3o.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">OK</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">ADS1115 <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Conversor anal\u00f3gico-digital (ADC).\nL\u00ea as 4 entradas anal\u00f3gicas.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">OK</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">DS3231 RTC <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Rel\u00f3gio de tempo real.\nMant\u00e9m a hora mesmo sem energia.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">OK</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Display <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Display OLED SSD1306 (I2C1).')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">OK</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Sensores 1-Wire <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Sensores de temperatura DS18B20.\nConectados ao barramento OneWire.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">4 encontrados</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Modbus <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Dispositivos Modbus RTU no barramento RS-485.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">2/2 online</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">Expans&otilde;es <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Placas de expans\u00e3o I2C (MCP23017).\nAdicionam DI/DO extras.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">1 placa online</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">I2C0 <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Barramento I2C0: MCP23017, ADS1115, DS3231.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">OK</span></div>
+      <div class="flex items-baseline justify-between border-b border-[rgba(0,0,0,.04)] py-1"><span class="text-[13px] leading-[1.3] text-[#6b7280]">I2C1 <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Barramento I2C1: Display + placas de expans\u00e3o.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></span><span class="text-right text-[13px] font-semibold leading-[1.3] text-[#111827]">OK</span></div>
     </div>
   </div>
 
   <!-- Boot Milestones -->
-  <div class="card">
-    <div class="panel-head">
-      <h2 class="panel-title">Boot Milestones</h2>
-      <button class="btn">Atualizar</button>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]">
+      <h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Boot Milestones</h2>
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Atualizar</button>
     </div>
-    <div class="table-wrap">
+    <div class="overflow-x-visible">
       <table>
         <thead><tr><th style="width:80px">Tempo (s)</th><th>Marco</th></tr></thead>
         <tbody>
@@ -164,35 +164,35 @@
   </div>
 
   <!-- Acoes -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">A&ccedil;&otilde;es</h2></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">A&ccedil;&otilde;es</h2></div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn">Reiniciar</button>
-      <button class="btn danger">Restaurar padr&atilde;o de f&aacute;brica</button>
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Reiniciar</button>
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#dc2626] !border-[#dc2626] !text-white">Restaurar padr&atilde;o de f&aacute;brica</button>
     </div>
   </div>
 
   <!-- Senha -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Senha do Administrador</h2></div>
-    <div class="fields">
-      <div class="field span-3">
-        <div class="label">Senha atual</div>
-        <input type="password" id="adm_curr" value="" autocomplete="current-password">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Senha do Administrador</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Senha atual</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="password" id="adm_curr" value="" autocomplete="current-password">
       </div>
-      <div class="field span-3">
-        <div class="label">Nova senha</div>
-        <input type="password" id="adm_new" value="" autocomplete="new-password">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Nova senha</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="password" id="adm_new" value="" autocomplete="new-password">
       </div>
-      <div class="field span-3">
-        <div class="label">Confirmar nova senha</div>
-        <input type="password" id="adm_new2" value="" autocomplete="new-password">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Confirmar nova senha</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="password" id="adm_new2" value="" autocomplete="new-password">
       </div>
-      <div class="field span-3">
-        <div class="label">&nbsp;</div>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">&nbsp;</div>
         <div style="display:flex;align-items:center;gap:8px;min-height:34px">
-          <label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer;white-space:nowrap"><input type="checkbox" onchange="['adm_curr','adm_new','adm_new2'].forEach(id=>document.getElementById(id).type=this.checked?'text':'password')" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label>
-          <button class="btn primary" style="white-space:nowrap">Alterar senha</button>
+          <label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer;white-space:nowrap"><input class="" type="checkbox" onchange="['adm_curr','adm_new','adm_new2'].forEach(id=>document.getElementById(id).type=this.checked?'text':'password')" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label>
+          <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white" style="white-space:nowrap">Alterar senha</button>
         </div>
       </div>
     </div>

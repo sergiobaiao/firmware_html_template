@@ -4,42 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Automa&ccedil;&otilde;es</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 </head>
-<body>
-<div class="page">
-  <div class="tabs">
-    <a class="tab" href="ui2.html">Status</a>
-    <a class="tab" href="network.html">Rede</a>
-    <a class="tab" href="gsm.html">Modem</a>
-    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
-    <a class="tab" href="expansions.html">Expans&otilde;es</a>
-    <a class="tab active" href="automations.html">Automa&ccedil;&otilde;es</a>
-    <a class="tab" href="system.html">Sistema</a>
-    <a class="tab" href="json.html">JSON</a>
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="max-w-[1460px] mx-auto px-5 pt-4 pb-6">
+  <div class="flex flex-wrap gap-2 mb-3">
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="ui2.html">Status</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="network.html">Rede</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="gsm.html">Modem</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="expansions.html">Expans&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="system.html">Sistema</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="json.html">JSON</a>
   </div>
 
-  <div class="topline">
-    <div class="subtabs">
-      <a class="subtab active" href="automations.html">Regras</a>
-      <a class="subtab" href="automations_variables.html">Vari&aacute;veis</a>
+  <div class="flex items-center justify-between gap-2.5 flex-wrap mb-3">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" href="automations.html">Regras</a>
+      <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="automations_variables.html">Vari&aacute;veis</a>
     </div>
-    <div class="actions-right">
-      <a href="automations_edit.html" class="btn primary" style="text-decoration:none">Adicionar Regra</a>
+    <div class="flex gap-1.5 ml-auto">
+      <a href="automations_edit.html" class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white" style="text-decoration:none">Adicionar Regra</a>
     </div>
   </div>
 
-  <div class="card">
-    <div class="toolbar">
-      <div class="filters">
-        <div class="filter">Todas</div>
-        <div class="filter">Habilitadas</div>
-        <div class="filter">Expostas</div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="mb-2.5 flex flex-wrap items-center justify-between gap-2.5">
+      <div class="flex flex-wrap gap-2">
+        <div class="inline-flex min-h-[30px] items-center rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[13px] font-semibold leading-none text-[#111827]">Todas</div>
+        <div class="inline-flex min-h-[30px] items-center rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[13px] font-semibold leading-none text-[#111827]">Habilitadas</div>
+        <div class="inline-flex min-h-[30px] items-center rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[13px] font-semibold leading-none text-[#111827]">Expostas</div>
       </div>
-      <input class="search" type="text" placeholder="Buscar por nome, DI, sensor...">
+      <input class="h-[30px] w-[380px] max-w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827] min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" placeholder="Buscar por nome, DI, sensor...">
     </div>
 
-    <div class="table-wrap">
+    <div class="overflow-x-visible">
       <table class="rules-table">
         <thead>
           <tr>
@@ -56,53 +56,53 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input class="" type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
             <td><div class="rule-name">Irriga&ccedil;&atilde;o</div></td>
-            <td><div class="main-line ellipsis">Seg&ndash;Sex 06:00</div></td>
-            <td><div class="main-line ellipsis">Sa&iacute;das 1-6 ligar | Aguardar 60 s | Sa&iacute;das 1-6 desligar</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap">Seg&ndash;Sex 06:00</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap">Sa&iacute;das 1-6 ligar | Aguardar 60 s | Sa&iacute;das 1-6 desligar</div></td>
             <td>API</td>
             <td style="font-size:13px">27/03/2026 06:00</td>
-            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+            <td><div class="flex items-center gap-1.5 whitespace-nowrap"><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Executar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Editar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-transparent !border-transparent !text-[#6b7280] !font-normal !px-1 !py-2">Excluir</button></div></td>
           </tr>
           <tr>
             <td>2</td>
-            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input class="" type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
             <td><div class="rule-name">Cena TV</div><div class="rule-meta">Modo: Recome&ccedil;ar</div></td>
-            <td><div class="main-line ellipsis">DI1 duplo clique ou DI2 clique</div><div class="sub-line ellipsis">Somente se: Modo noturno ligado</div></td>
-            <td><div class="main-line ellipsis">Sa&iacute;das 1-3 ligar | Bomba = Ligado</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap">DI1 duplo clique ou DI2 clique</div><div class="sub-line block overflow-hidden text-ellipsis whitespace-nowrap">Somente se: Modo noturno ligado</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap">Sa&iacute;das 1-3 ligar | Bomba = Ligado</div></td>
             <td>API Aux</td>
             <td style="font-size:13px">&mdash;</td>
-            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+            <td><div class="flex items-center gap-1.5 whitespace-nowrap"><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Executar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Editar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-transparent !border-transparent !text-[#6b7280] !font-normal !px-1 !py-2">Excluir</button></div></td>
           </tr>
           <tr>
             <td>3</td>
-            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input class="" type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
             <td><div class="rule-name">Prote&ccedil;&atilde;o bomba</div></td>
-            <td><div class="main-line ellipsis">AI1 &gt; 10,5</div><div class="sub-line ellipsis">Somente se: Bomba ligado e Internet ligado</div></td>
-            <td><div class="main-line ellipsis">Sa&iacute;das 1-4 desligar | Bomba = Desligado | Alarme = Ligado</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap">AI1 &gt; 10,5</div><div class="sub-line block overflow-hidden text-ellipsis whitespace-nowrap">Somente se: Bomba ligado e Internet ligado</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap">Sa&iacute;das 1-4 desligar | Bomba = Desligado | Alarme = Ligado</div></td>
             <td>&mdash;</td>
             <td style="font-size:13px">&mdash;</td>
-            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+            <td><div class="flex items-center gap-1.5 whitespace-nowrap"><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Executar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Editar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-transparent !border-transparent !text-[#6b7280] !font-normal !px-1 !py-2">Excluir</button></div></td>
           </tr>
           <tr>
             <td>4</td>
-            <td style="text-align:center"><input type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input class="" type="checkbox" checked style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
             <td><div class="rule-name">Polling sensor</div></td>
-            <td><div class="main-line ellipsis">A cada 15 min</div></td>
-            <td><div class="main-line ellipsis">Modo noturno = Alternar</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap">A cada 15 min</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap">Modo noturno = Alternar</div></td>
             <td>API</td>
             <td style="font-size:13px">27/03/2026 18:45</td>
-            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+            <td><div class="flex items-center gap-1.5 whitespace-nowrap"><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Executar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Editar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-transparent !border-transparent !text-[#6b7280] !font-normal !px-1 !py-2">Excluir</button></div></td>
           </tr>
           <tr style="color:#9ca3af">
             <td>5</td>
-            <td style="text-align:center"><input type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
+            <td style="text-align:center"><input class="" type="checkbox" style="min-height:auto;border:none;width:16px;height:16px;accent-color:var(--primary)"></td>
             <td><div class="rule-name" style="color:inherit">Failover rede</div></td>
-            <td><div class="main-line ellipsis" style="color:inherit">ETH link caiu ou Wi-Fi caiu</div></td>
-            <td><div class="main-line ellipsis" style="color:inherit">Alarme = Ligado</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap" style="color:inherit">ETH link caiu ou Wi-Fi caiu</div></td>
+            <td><div class="main-line block overflow-hidden text-ellipsis whitespace-nowrap" style="color:inherit">Alarme = Ligado</div></td>
             <td>API</td>
             <td style="font-size:13px">&mdash;</td>
-            <td><div class="actions"><button class="btn primary">Executar</button><button class="btn">Editar</button><button class="btn link">Excluir</button></div></td>
+            <td><div class="flex items-center gap-1.5 whitespace-nowrap"><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Executar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Editar</button><button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-transparent !border-transparent !text-[#6b7280] !font-normal !px-1 !py-2">Excluir</button></div></td>
           </tr>
         </tbody>
       </table>

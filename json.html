@@ -4,33 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>JSON</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 </head>
-<body>
-<div class="page">
-  <div class="tabs">
-    <a class="tab" href="ui2.html">Status</a>
-    <a class="tab" href="network.html">Rede</a>
-    <a class="tab" href="gsm.html">Modem</a>
-    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
-    <a class="tab" href="expansions.html">Expans&otilde;es</a>
-    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
-    <a class="tab" href="system.html">Sistema</a>
-    <a class="tab active" href="json.html">JSON</a>
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="max-w-[1460px] mx-auto px-5 pt-4 pb-6">
+  <div class="flex flex-wrap gap-2 mb-3">
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="ui2.html">Status</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="network.html">Rede</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="gsm.html">Modem</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="expansions.html">Expans&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="system.html">Sistema</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" href="json.html">JSON</a>
   </div>
 
-  <div class="card">
-    <div class="panel-head">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]">
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-        <h2 class="panel-title">JSON</h2>
-        <button class="btn">Carregar</button>
-        <button class="btn primary">Salvar</button>
-        <button class="btn">Aplicar aos campos</button>
-        <button class="btn">Exportar</button>
-        <button class="btn">Importar</button>
+        <h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">JSON</h2>
+        <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Carregar</button>
+        <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Salvar</button>
+        <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Aplicar aos campos</button>
+        <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Exportar</button>
+        <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Importar</button>
       </div>
     </div>
-    <textarea style="width:100%;min-height:300px;background:#fff;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px;font:400 13px/1.5 monospace;resize:vertical">{
+    <textarea class="min-h-[80px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827] resize-y" style="width:100%;min-height:300px;background:#fff;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px;font:400 13px/1.5 monospace;resize:vertical">{
   "magic": 2882343476,
   "version": 23,
   "eth_dhcp": true,

@@ -4,160 +4,160 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rede</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 <script src="ui.js"></script>
 </head>
-<body>
-<div class="page">
-  <div class="tabs">
-    <a class="tab" href="ui2.html">Status</a>
-    <a class="tab active" href="network.html">Rede</a>
-    <a class="tab" href="gsm.html">Modem</a>
-    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
-    <a class="tab" href="expansions.html">Expans&otilde;es</a>
-    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
-    <a class="tab" href="system.html">Sistema</a>
-    <a class="tab" href="json.html">JSON</a>
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="max-w-[1460px] mx-auto px-5 pt-4 pb-6">
+  <div class="flex flex-wrap gap-2 mb-3">
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="ui2.html">Status</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" href="network.html">Rede</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="gsm.html">Modem</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="expansions.html">Expans&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="system.html">Sistema</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="json.html">JSON</a>
   </div>
 
-  <div class="header">
+  <div class="flex items-end justify-end gap-2.5 mb-2.5 flex-wrap">
     
-    <button class="btn primary">Salvar</button>
+    <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Salvar</button>
   </div>
 
   <!-- LAN -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Lan</h2></div>
-    <div class="fields">
-      <div class="field span-4">
-        <div class="label">Modo</div>
-        <select id="lan_mode" onchange="document.getElementById('lan_static').style.display=this.value==='static'?'':'none';">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Lan</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Modo</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" id="lan_mode" onchange="document.getElementById('lan_static').style.display=this.value==='static'?'':'none';">
           <option value="dhcp" selected>DHCP</option>
           <option value="static">Est&aacute;tico</option>
         </select>
       </div>
-      <div class="field span-4">
-        <div class="label">DNS 1</div>
-        <input type="text" value="8.8.8.8">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">DNS 1</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="8.8.8.8">
       </div>
-      <div class="field span-4">
-        <div class="label">DNS 2</div>
-        <input type="text" value="8.8.4.4">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">DNS 2</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="8.8.4.4">
       </div>
     </div>
-    <div id="lan_static" class="fields" style="margin-top:8px;display:none">
-      <div class="field span-4">
-        <div class="label">Endere&ccedil;o IP</div>
-        <input type="text" value="" placeholder="192.168.100.31">
+    <div id="lan_static" class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]" style="margin-top:8px;display:none">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Endere&ccedil;o IP</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="192.168.100.31">
       </div>
-      <div class="field span-4">
-        <div class="label">M&aacute;scara</div>
-        <input type="text" value="" placeholder="255.255.255.0">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">M&aacute;scara</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="255.255.255.0">
       </div>
-      <div class="field span-4">
-        <div class="label">Gateway</div>
-        <input type="text" value="" placeholder="192.168.100.1">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Gateway</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="192.168.100.1">
       </div>
     </div>
   </div>
 
   <!-- Wi-Fi -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Wi-Fi</h2></div>
-    <div class="fields">
-      <div class="field span-6">
-        <div class="label">Habilitar</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
-          <span class="switch-label">Ativado</span>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Wi-Fi</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Habilitar</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">Ativado</span>
         </div>
       </div>
-      <div class="field span-6">
-        <div class="label">Modo</div>
-        <select id="wifi_mode" onchange="document.getElementById('wifi_sta').style.display=this.value==='sta'?'':'none';document.getElementById('wifi_ap').style.display=this.value==='ap'?'':'none';">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Modo</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" id="wifi_mode" onchange="document.getElementById('wifi_sta').style.display=this.value==='sta'?'':'none';document.getElementById('wifi_ap').style.display=this.value==='ap'?'':'none';">
           <option value="ap">AP (Access Point)</option>
           <option value="sta" selected>STA (Cliente)</option>
         </select>
       </div>
     </div>
     <!-- Campos STA -->
-    <div id="wifi_sta" class="fields" style="margin-top:8px">
-      <div class="field span-6">
-        <div class="label">SSID</div>
-        <input type="text" value="Daniel 2.4g">
+    <div id="wifi_sta" class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]" style="margin-top:8px">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">SSID</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="Daniel 2.4g">
       </div>
-      <div class="field span-4">
-        <div class="label">Senha</div>
-        <input type="password" id="wifi_sta_pass" value="Drica33@">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Senha</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="password" id="wifi_sta_pass" value="Drica33@">
       </div>
-      <div class="field span-2">
-        <div class="label">&nbsp;</div>
-        <div class="switch-row" style="min-height:34px"><label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" onchange="document.getElementById('wifi_sta_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label></div>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-2">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">&nbsp;</div>
+        <div class="flex min-h-8 items-center gap-2" style="min-height:34px"><label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input class="" type="checkbox" onchange="document.getElementById('wifi_sta_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label></div>
       </div>
-      <div class="field span-4">
-        <div class="label">Modo IP</div>
-        <select id="wifi_sta_ipmode" onchange="document.getElementById('wifi_sta_static').style.display=this.value==='static'?'':'none';">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Modo IP</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" id="wifi_sta_ipmode" onchange="document.getElementById('wifi_sta_static').style.display=this.value==='static'?'':'none';">
           <option value="dhcp" selected>DHCP</option>
           <option value="static">Est&aacute;tico</option>
         </select>
       </div>
-      <div class="field span-4">
-        <div class="label">DNS 1</div>
-        <input type="text" value="8.8.8.8">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">DNS 1</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="8.8.8.8">
       </div>
-      <div class="field span-4">
-        <div class="label">DNS 2</div>
-        <input type="text" value="8.8.4.4">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">DNS 2</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="8.8.4.4">
       </div>
     </div>
     <!-- Campos IP estático STA -->
-    <div id="wifi_sta_static" class="fields" style="margin-top:8px;display:none">
-      <div class="field span-4">
-        <div class="label">IP</div>
-        <input type="text" value="" placeholder="192.168.0.10">
+    <div id="wifi_sta_static" class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]" style="margin-top:8px;display:none">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">IP</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="192.168.0.10">
       </div>
-      <div class="field span-4">
-        <div class="label">M&aacute;scara</div>
-        <input type="text" value="" placeholder="255.255.255.0">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">M&aacute;scara</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="255.255.255.0">
       </div>
-      <div class="field span-4">
-        <div class="label">Gateway</div>
-        <input type="text" value="" placeholder="192.168.0.1">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Gateway</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="" placeholder="192.168.0.1">
       </div>
     </div>
     <!-- Campos AP -->
-    <div id="wifi_ap" class="fields" style="margin-top:8px;display:none">
-      <div class="field span-6">
-        <div class="label">SSID do AP (somente leitura)</div>
-        <input type="text" value="Braazi-B884-M-13CFD0" class="readonly" readonly>
+    <div id="wifi_ap" class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]" style="margin-top:8px;display:none">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">SSID do AP (somente leitura)</div>
+        <input type="text" value="Braazi-B884-M-13CFD0" class="bg-[#f9fafb] text-[#374151] min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" readonly>
       </div>
-      <div class="field span-4">
-        <div class="label">Senha do AP</div>
-        <input type="password" id="wifi_ap_pass" value="Braazi13CFD0">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Senha do AP</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="password" id="wifi_ap_pass" value="Braazi13CFD0">
       </div>
-      <div class="field span-2">
-        <div class="label">&nbsp;</div>
-        <div class="switch-row" style="min-height:34px"><label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" onchange="document.getElementById('wifi_ap_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label></div>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-2">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">&nbsp;</div>
+        <div class="flex min-h-8 items-center gap-2" style="min-height:34px"><label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input class="" type="checkbox" onchange="document.getElementById('wifi_ap_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar</label></div>
       </div>
-      <div class="field span-12" style="font:400 12px/1.4 var(--font);color:var(--muted)">Senha padr&atilde;o do AP = Braazi + &uacute;ltimos 6 do SSID.</div>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12" style="font:400 12px/1.4 var(--font);color:var(--muted)">Senha padr&atilde;o do AP = Braazi + &uacute;ltimos 6 do SSID.</div>
     </div>
     <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
-      <button class="btn">Buscar redes</button>
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer">Buscar redes</button>
       <span style="font:400 12px/1.4 var(--font);color:var(--muted)">Clique em &ldquo;Buscar redes&rdquo; para listar.</span>
     </div>
   </div>
 
   <!-- Data e Hora -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Data e Hora</h2></div>
-    <div class="fields">
-      <div class="field span-6">
-        <div class="label">Servidor NTP <span class="tip-hit" onclick="openTip('Altera\u00e7\u00f5es de servidor NTP passam a valer no pr\u00f3ximo boot.')"><span class="tip-icon">i</span></span></div>
-        <input type="text" value="pool.ntp.org" maxlength="63">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Data e Hora</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Servidor NTP <span class="ml-1 inline-flex cursor-pointer items-center align-baseline" onclick="openTip('Altera\u00e7\u00f5es de servidor NTP passam a valer no pr\u00f3ximo boot.')"><span class="inline-flex h-[14px] w-[14px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#9ca3af] text-[9px] font-semibold leading-none text-[#9ca3af]">i</span></span></div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="pool.ntp.org" maxlength="63">
       </div>
-      <div class="field span-6">
-        <div class="label">Fuso hor&aacute;rio</div>
-        <select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Fuso hor&aacute;rio</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]">
           <option value="-720">UTC -12</option>
           <option value="-660">UTC -11</option>
           <option value="-600">UTC -10</option>

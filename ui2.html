@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Status</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 <style>
 /* Status badges bar */
 .status-bar{display:flex;flex-wrap:nowrap;gap:8px;align-items:flex-start;overflow-x:auto;padding-bottom:2px;width:100%}
@@ -56,22 +56,22 @@
 @media(max-width:720px){.do-wrap{grid-template-columns:1fr}.ai-wrap{grid-template-columns:1fr}}
 </style>
 </head>
-<body>
-<div class="page">
-  <div class="tabs">
-    <a class="tab active" href="ui2.html">Status</a>
-    <a class="tab" href="network.html">Rede</a>
-    <a class="tab" href="gsm.html">Modem</a>
-    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
-    <a class="tab" href="expansions.html">Expans&otilde;es</a>
-    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
-    <a class="tab" href="system.html">Sistema</a>
-    <a class="tab" href="json.html">JSON</a>
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="max-w-[1460px] mx-auto px-5 pt-4 pb-6">
+  <div class="flex flex-wrap gap-2 mb-3">
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline !bg-[#2563eb] !border-[#2563eb] !text-white" href="ui2.html">Status</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="network.html">Rede</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="gsm.html">Modem</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="expansions.html">Expans&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="system.html">Sistema</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="json.html">JSON</a>
   </div>
 
   <!-- ===== STATUS ===== -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Status</h2></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Status</h2></div>
     <div class="status-bar">
       <div class="status-badge">ETH: UP</div>
       <div class="status-badge">IP: 192.168.100.31</div>
@@ -86,104 +86,104 @@
   </div>
 
   <!-- ===== SENSORES ===== -->
-  <div class="card">
-    <div class="panel-head">
-      <div class="title-gear"><h2 class="panel-title">Sensores</h2><a href="sensors.html" class="gear">&#9881;</a></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]">
+      <div class="title-gear"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Sensores</h2><a href="sensors.html" class="gear">&#9881;</a></div>
     </div>
-    <div class="tiles">
-      <div class="tile">
-        <p class="tile-title">Sensor 1</p>
-        <p class="tile-value">29.5 &deg;C</p>
+    <div class="grid gap-2 [grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]">
+      <div class="rounded-lg border border-[#e5e7eb] bg-white p-2 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+        <p class="m-0 mb-1 text-[13px] font-semibold leading-[1.2]">Sensor 1</p>
+        <p class="m-0 mb-0.5 text-[16px] font-semibold leading-[1.2]">29.5 &deg;C</p>
       </div>
-      <div class="tile">
-        <p class="tile-title">Sensor 2</p>
-        <p class="tile-value">29.3 &deg;C</p>
+      <div class="rounded-lg border border-[#e5e7eb] bg-white p-2 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+        <p class="m-0 mb-1 text-[13px] font-semibold leading-[1.2]">Sensor 2</p>
+        <p class="m-0 mb-0.5 text-[16px] font-semibold leading-[1.2]">29.3 &deg;C</p>
       </div>
-      <div class="tile">
-        <p class="tile-title">Sensor 3</p>
-        <p class="tile-value">29.3 &deg;C</p>
+      <div class="rounded-lg border border-[#e5e7eb] bg-white p-2 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+        <p class="m-0 mb-1 text-[13px] font-semibold leading-[1.2]">Sensor 3</p>
+        <p class="m-0 mb-0.5 text-[16px] font-semibold leading-[1.2]">29.3 &deg;C</p>
       </div>
-      <div class="tile">
-        <p class="tile-title">Sensor 4</p>
-        <p class="tile-value">29.1 &deg;C</p>
+      <div class="rounded-lg border border-[#e5e7eb] bg-white p-2 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+        <p class="m-0 mb-1 text-[13px] font-semibold leading-[1.2]">Sensor 4</p>
+        <p class="m-0 mb-0.5 text-[16px] font-semibold leading-[1.2]">29.1 &deg;C</p>
       </div>
     </div>
   </div>
 
   <!-- ===== ENTRADAS DIGITAIS ===== -->
-  <div class="card">
-    <div class="panel-head">
-      <div class="title-gear"><h2 class="panel-title">Entradas Digitais (DI)</h2><a href="di.html" class="gear">&#9881;</a></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]">
+      <div class="title-gear"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Entradas Digitais (DI)</h2><a href="di.html" class="gear">&#9881;</a></div>
     </div>
-    <div class="leds" style="grid-template-columns:repeat(5,1fr)">
-      <div class="led"><div class="dot"></div><span>DI1</span><span style="color:var(--text)">Sensor 1</span></div>
-      <div class="led"><div class="dot"></div><span>DI2</span><span style="color:var(--text)">Sensor 2</span></div>
-      <div class="led"><div class="dot"></div><span>DI3</span><span style="color:var(--text)">Sensor 3</span></div>
-      <div class="led"><div class="dot"></div><span>DI4</span></div>
-      <div class="led"><div class="dot"></div><span>DI5</span></div>
-      <div class="led"><div class="dot"></div><span>DI6</span></div>
-      <div class="led"><div class="dot"></div><span>DI7</span></div>
-      <div class="led"><div class="dot"></div><span>DI8</span></div>
-      <div class="led"><div class="dot"></div><span>DI9</span></div>
-      <div class="led"><div class="dot"></div><span>DI10</span></div>
-      <div class="led"><div class="dot"></div><span>DI11</span></div>
-      <div class="led"><div class="dot"></div><span>DI12</span></div>
-      <div class="led"><div class="dot"></div><span>DI13</span></div>
-      <div class="led"><div class="dot"></div><span>DI14</span></div>
-      <div class="led"><div class="dot"></div><span>DI15</span></div>
-      <div class="led"><div class="dot"></div><span>DI16</span></div>
-      <div class="led"><div class="dot"></div><span>DI17</span></div>
-      <div class="led"><div class="dot"></div><span>DI18</span></div>
-      <div class="led"><div class="dot"></div><span>DI19</span></div>
-      <div class="led"><div class="dot"></div><span>DI20</span></div>
-      <div class="led"><div class="dot"></div><span>DI21</span></div>
-      <div class="led"><div class="dot"></div><span>DI22</span></div>
-      <div class="led"><div class="dot"></div><span>DI23</span></div>
-      <div class="led"><div class="dot"></div><span>DI24</span></div>
-      <div class="led"><div class="dot"></div><span>DI25</span></div>
-      <div class="led"><div class="dot"></div><span>DI26</span></div>
-      <div class="led"><div class="dot"></div><span>DI27</span></div>
-      <div class="led"><div class="dot"></div><span>DI28</span></div>
-      <div class="led"><div class="dot"></div><span>DI29</span></div>
-      <div class="led"><div class="dot"></div><span>DI30</span></div>
-      <div class="led"><div class="dot"></div><span>DI31</span></div>
-      <div class="led"><div class="dot"></div><span>DI32</span></div>
+    <div class="grid gap-y-1 gap-x-4 [grid-template-columns:repeat(auto-fill,minmax(260px,1fr))]" style="grid-template-columns:repeat(5,1fr)">
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI1</span><span style="color:var(--text)">Sensor 1</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI2</span><span style="color:var(--text)">Sensor 2</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI3</span><span style="color:var(--text)">Sensor 3</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI4</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI5</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI6</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI7</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI8</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI9</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI10</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI11</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI12</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI13</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI14</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI15</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI16</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI17</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI18</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI19</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI20</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI21</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI22</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI23</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI24</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI25</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI26</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI27</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI28</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI29</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI30</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI31</span></div>
+      <div class="grid items-center gap-1.5 [grid-template-columns:14px_5ch_1fr] text-[14px] leading-[1.4]"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DI32</span></div>
     </div>
   </div>
 
   <!-- ===== SAIDAS DIGITAIS ===== -->
-  <div class="card">
-    <div class="panel-head">
-      <div class="title-gear"><h2 class="panel-title">Sa&iacute;das Digitais (DO)</h2><a href="do.html" class="gear">&#9881;</a></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]">
+      <div class="title-gear"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Sa&iacute;das Digitais (DO)</h2><a href="do.html" class="gear">&#9881;</a></div>
     </div>
     <div class="do-wrap">
       <div class="do-col">
-        <div class="do-row-fw"><div class="dot"></div><span>DO1</span><span class="do-lbl">Atuador 1</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO2</span><span class="do-lbl">Atuador 2</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO3</span><span class="do-lbl">Atuador 3</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO4</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO5</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO6</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO7</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO8</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO1</span><span class="do-lbl">Atuador 1</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO2</span><span class="do-lbl">Atuador 2</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO3</span><span class="do-lbl">Atuador 3</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO4</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO5</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO6</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO7</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO8</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
       </div>
       <div class="do-col">
-        <div class="do-row-fw"><div class="dot"></div><span>DO17</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO18</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO19</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO20</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO21</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO22</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO23</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
-        <div class="do-row-fw"><div class="dot"></div><span>DO24</span><span class="do-lbl">&mdash;</span><div class="do-acts"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO17</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO18</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO19</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO20</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO21</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO22</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO23</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
+        <div class="do-row-fw"><div class="h-[14px] w-[14px] rounded-full bg-[#e5e7eb]"></div><span>DO24</span><span class="do-lbl">&mdash;</span><div class="flex gap-1"><button>ON</button><button class="off-btn">OFF</button><button class="toggle-btn">TOGGLE</button></div></div>
       </div>
     </div>
   </div>
 
   <!-- ===== ENTRADAS ANALOGICAS ===== -->
-  <div class="card">
-    <div class="panel-head">
-      <div class="title-gear"><h2 class="panel-title">Entradas Anal&oacute;gicas (AI)</h2><a href="ai.html" class="gear">&#9881;</a></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]">
+      <div class="title-gear"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Entradas Anal&oacute;gicas (AI)</h2><a href="ai.html" class="gear">&#9881;</a></div>
     </div>
     <div class="ai-wrap">
       <!-- AI1 -->
@@ -192,8 +192,8 @@
           <span class="ai-name">AI1 - Press&atilde;o Rede Sprinkler</span>
           <span class="ai-val">7,15 bar</span>
         </div>
-        <div class="bar"><div class="fill ok" style="width:44.7%"></div></div>
-        <div class="bar-labels"><span>0 bar</span><span>16 bar</span></div>
+        <div class="my-[6px] mb-[2px] h-3 overflow-hidden rounded-md bg-[#e5e7eb]"><div class="h-full rounded-md !bg-[#16a34a]" style="width:44.7%"></div></div>
+        <div class="flex justify-between text-[12px] leading-none text-[#6b7280]"><span>0 bar</span><span>16 bar</span></div>
         <div class="ai-details">
           Monitoramento: -<br>
           Sinal Eng. (Bruto): 7,15 bar<br>
@@ -206,8 +206,8 @@
           <span class="ai-name">AI2</span>
           <span class="ai-val">0</span>
         </div>
-        <div class="bar"><div class="fill" style="width:0%"></div></div>
-        <div class="bar-labels"><span>0</span><span>100</span></div>
+        <div class="my-[6px] mb-[2px] h-3 overflow-hidden rounded-md bg-[#e5e7eb]"><div class="h-full rounded-md" style="width:0%"></div></div>
+        <div class="flex justify-between text-[12px] leading-none text-[#6b7280]"><span>0</span><span>100</span></div>
         <div class="ai-details">
           Monitoramento: -<br>
           Sinal Eng. (Bruto): 0<br>
@@ -220,8 +220,8 @@
           <span class="ai-name">AI3 - Volume RTI</span>
           <span class="ai-val">297.581,25 litros</span>
         </div>
-        <div class="bar"><div class="fill ok" style="width:49.6%"></div></div>
-        <div class="bar-labels"><span>0 litros</span><span>600.000 litros</span></div>
+        <div class="my-[6px] mb-[2px] h-3 overflow-hidden rounded-md bg-[#e5e7eb]"><div class="h-full rounded-md !bg-[#16a34a]" style="width:49.6%"></div></div>
+        <div class="flex justify-between text-[12px] leading-none text-[#6b7280]"><span>0 litros</span><span>600.000 litros</span></div>
         <div class="ai-details">
           Monitoramento: OK<br>
           Sinal Eng. (Bruto): 2,93 metros<br>
@@ -234,8 +234,8 @@
           <span class="ai-name">AI4</span>
           <span class="ai-val" style="color:var(--muted)">&mdash;</span>
         </div>
-        <div class="bar"><div class="fill" style="width:0%;background:var(--line)"></div></div>
-        <div class="bar-labels"><span>0</span><span>100</span></div>
+        <div class="my-[6px] mb-[2px] h-3 overflow-hidden rounded-md bg-[#e5e7eb]"><div class="h-full rounded-md" style="width:0%;background:var(--line)"></div></div>
+        <div class="flex justify-between text-[12px] leading-none text-[#6b7280]"><span>0</span><span>100</span></div>
         <div class="ai-details">
           <span class="alert-text">Monitoramento: ABERTO</span><br>
           Sinal Eng. (Bruto): 0<br>
@@ -246,14 +246,14 @@
   </div>
 
   <!-- ===== RS485 / MODBUS ===== -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">RS485 / Modbus</h2></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">RS485 / Modbus</h2></div>
 
     <!-- JSY-MK-354 -->
     <div class="rs485-block">
       <div class="rs485-header">
         <span class="rs485-name">Endere&ccedil;o 1 &middot; JSY-MK-354</span>
-        <span class="badge on">Online</span>
+        <span class="badge !bg-[#16a34a]">Online</span>
       </div>
       <div class="rs485-tw">
         <table class="rs485-t">
@@ -330,7 +330,7 @@
     <div class="rs485-block">
       <div class="rs485-header">
         <span class="rs485-name">Endere&ccedil;o 2 &middot; JSY-MK-141G</span>
-        <span class="badge on">Online</span>
+        <span class="badge !bg-[#16a34a]">Online</span>
       </div>
       <div class="rs485-tw">
         <table class="rs485-t">

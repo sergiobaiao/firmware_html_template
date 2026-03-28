@@ -4,25 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Login</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 </head>
-<body>
-<div class="login-wrap">
-  <div class="card login-card">
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="flex min-h-screen items-center justify-center p-4">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)] w-full max-w-[380px]">
     <div style="text-align:center;margin-bottom:16px;">
       <div style="font:600 22px/1.2 var(--font);color:var(--primary);">B884-M</div>
       <div style="font:400 12px/1.4 var(--font);color:var(--muted);margin-top:4px;">Braazi Automa&ccedil;&atilde;o Industrial</div>
     </div>
-    <div class="fields">
-      <div class="field span-12">
-        <div class="label">Senha do Administrador</div>
-        <input type="password" id="login_pass" value="">
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Senha do Administrador</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="password" id="login_pass" value="">
       </div>
-      <div class="field span-12">
-        <label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" onchange="document.getElementById('login_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar senha</label>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <label style="font:400 13px/1 var(--font);display:flex;align-items:center;gap:4px;cursor:pointer"><input class="" type="checkbox" onchange="document.getElementById('login_pass').type=this.checked?'text':'password'" style="min-height:auto;border:none;width:14px;height:14px;accent-color:var(--primary)"> Mostrar senha</label>
       </div>
-      <div class="field span-12">
-        <button class="btn primary" style="width:100%">Entrar</button>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-12">
+        <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white" style="width:100%">Entrar</button>
       </div>
     </div>
   </div>

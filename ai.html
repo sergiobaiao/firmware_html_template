@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Entradas Anal&oacute;gicas</title>
-<link rel="stylesheet" href="ui.css">
+<script src="tailwind.js"></script>
 <style>
 .live-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px}
 .live-card{border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--card)}
@@ -16,61 +16,61 @@
 .chip.err{background:#fdecec;border-color:#fca5a5;color:#7f1d1d}
 </style>
 </head>
-<body>
-<div class="page">
-  <div class="tabs">
-    <a class="tab" href="ui2.html">Status</a>
-    <a class="tab" href="network.html">Rede</a>
-    <a class="tab" href="gsm.html">Modem</a>
-    <a class="tab" href="protocol.html">Integra&ccedil;&otilde;es</a>
-    <a class="tab" href="expansions.html">Expans&otilde;es</a>
-    <a class="tab" href="automations.html">Automa&ccedil;&otilde;es</a>
-    <a class="tab" href="system.html">Sistema</a>
-    <a class="tab" href="json.html">JSON</a>
+<body class="m-0 bg-[#f5f6f8] text-[#111827] [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[14px] leading-[1.4]">
+<div class="max-w-[1460px] mx-auto px-5 pt-4 pb-6">
+  <div class="flex flex-wrap gap-2 mb-3">
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="ui2.html">Status</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="network.html">Rede</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="gsm.html">Modem</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="protocol.html">Integra&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="expansions.html">Expans&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="automations.html">Automa&ccedil;&otilde;es</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="system.html">Sistema</a>
+    <a class="inline-flex items-center min-h-[34px] rounded-[10px] border border-[#e5e7eb] bg-white px-3 py-[7px] text-[14px] font-semibold leading-[1.2] text-[#111827] shadow-[0_1px_2px_rgba(0,0,0,.05)] no-underline" href="json.html">JSON</a>
   </div>
 
-  <div class="header">
+  <div class="flex items-end justify-end gap-2.5 mb-2.5 flex-wrap">
     <div></div>
     <div style="display:flex;gap:6px">
-      <a href="ui2.html" class="btn" style="text-decoration:none">Voltar</a>
-      <button class="btn primary">Salvar</button>
+      <a href="ui2.html" class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer" style="text-decoration:none">Voltar</a>
+      <button class="inline-flex items-center justify-center min-h-[30px] rounded-[10px] border border-[#e5e7eb] bg-[#f3f4f6] px-[11px] py-1.5 text-[12px] font-semibold leading-none text-[#111827] cursor-pointer !bg-[#2563eb] !border-[#2563eb] !text-white">Salvar</button>
     </div>
   </div>
 
   <!-- Seletor de canal -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Sele&ccedil;&atilde;o de canal</h2></div>
-    <div class="fields">
-      <div class="field span-3">
-        <div class="label">Canal</div>
-        <select>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Sele&ccedil;&atilde;o de canal</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Canal</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]">
           <option selected>AI1</option>
           <option>AI2</option>
           <option>AI3</option>
           <option>AI4</option>
         </select>
       </div>
-      <div class="field span-3">
-        <div class="label">Habilitar</div>
-        <div class="switch-row">
-          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
-          <span class="switch-label">Ativado</span>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Habilitar</div>
+        <div class="flex min-h-8 items-center gap-2">
+          <label class="relative inline-block h-5 w-9 shrink-0"><input class="" type="checkbox" checked><span class="absolute inset-0 rounded-full bg-[#d1d5db] transition-all"></span></label>
+          <span class="text-[13px] leading-[1.2]">Ativado</span>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Identificacao -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Identifica&ccedil;&atilde;o</h2></div>
-    <div class="fields">
-      <div class="field span-6">
-        <div class="label">Nome do sensor</div>
-        <input type="text" value="Press&atilde;o do tanque" maxlength="23">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Identifica&ccedil;&atilde;o</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Nome do sensor</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="Press&atilde;o do tanque" maxlength="23">
       </div>
-      <div class="field span-6">
-        <div class="label">Modo de entrada</div>
-        <select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-6">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Modo de entrada</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]">
           <option>0-10 V</option>
           <option selected>4-20 mA</option>
         </select>
@@ -79,81 +79,81 @@
   </div>
 
   <!-- Escala do sensor -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Escala do sensor</h2></div>
-    <div class="fields">
-      <div class="field span-4">
-        <div class="label">Range m&iacute;nimo</div>
-        <input type="number" value="0" step="0.01">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Escala do sensor</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Range m&iacute;nimo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="0" step="0.01">
       </div>
-      <div class="field span-4">
-        <div class="label">Range m&aacute;ximo</div>
-        <input type="number" value="10" step="0.01">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Range m&aacute;ximo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="10" step="0.01">
       </div>
-      <div class="field span-4">
-        <div class="label">Unidade</div>
-        <input type="text" value="bar" maxlength="11">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Unidade</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="bar" maxlength="11">
       </div>
     </div>
   </div>
 
   <!-- Escala da aplicacao -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Escala da aplica&ccedil;&atilde;o (avan&ccedil;ado)</h2></div>
-    <div class="fields">
-      <div class="field span-4">
-        <div class="label">Range da aplica&ccedil;&atilde;o &mdash; m&iacute;nimo</div>
-        <input type="number" value="0" step="0.01">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Escala da aplica&ccedil;&atilde;o (avan&ccedil;ado)</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Range da aplica&ccedil;&atilde;o &mdash; m&iacute;nimo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="0" step="0.01">
       </div>
-      <div class="field span-4">
-        <div class="label">Range da aplica&ccedil;&atilde;o &mdash; m&aacute;ximo</div>
-        <input type="number" value="10" step="0.01">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Range da aplica&ccedil;&atilde;o &mdash; m&aacute;ximo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="10" step="0.01">
       </div>
-      <div class="field span-4">
-        <div class="label">Unidade</div>
-        <input type="text" value="(mesma do sensor)" class="readonly" readonly>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Unidade</div>
+        <input type="text" value="(mesma do sensor)" class="bg-[#f9fafb] text-[#374151] min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" readonly>
       </div>
     </div>
   </div>
 
   <!-- Escala de exibicao -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Escala da exibi&ccedil;&atilde;o (opcional)</h2></div>
-    <div class="fields">
-      <div class="field span-4">
-        <div class="label">Exibi&ccedil;&atilde;o &mdash; m&iacute;nimo</div>
-        <input type="number" value="0" step="0.01">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Escala da exibi&ccedil;&atilde;o (opcional)</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Exibi&ccedil;&atilde;o &mdash; m&iacute;nimo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="0" step="0.01">
       </div>
-      <div class="field span-4">
-        <div class="label">Exibi&ccedil;&atilde;o &mdash; m&aacute;ximo</div>
-        <input type="number" value="600000" step="0.01">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Exibi&ccedil;&atilde;o &mdash; m&aacute;ximo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="600000" step="0.01">
       </div>
-      <div class="field span-4">
-        <div class="label">Unidade de exibi&ccedil;&atilde;o</div>
-        <input type="text" value="L" maxlength="11">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-4">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Unidade de exibi&ccedil;&atilde;o</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="text" value="L" maxlength="11">
       </div>
     </div>
   </div>
 
   <!-- Alertas e suavizacao -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Alertas e suaviza&ccedil;&atilde;o</h2></div>
-    <div class="fields">
-      <div class="field span-3">
-        <div class="label">Alerta m&iacute;nimo</div>
-        <input type="number" value="1" step="0.01">
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Alertas e suaviza&ccedil;&atilde;o</h2></div>
+    <div class="grid max-w-full grid-cols-12 justify-start items-start gap-y-2 gap-x-[14px]">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Alerta m&iacute;nimo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="1" step="0.01">
       </div>
-      <div class="field span-3">
-        <div class="label">Alerta m&aacute;ximo</div>
-        <input type="number" value="9" step="0.01">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Alerta m&aacute;ximo</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="9" step="0.01">
       </div>
-      <div class="field span-3">
-        <div class="label">Histerese (%)</div>
-        <input type="number" value="2" step="0.1" min="0" max="20">
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Histerese (%)</div>
+        <input class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]" type="number" value="2" step="0.1" min="0" max="20">
       </div>
-      <div class="field span-3">
-        <div class="label">Suaviza&ccedil;&atilde;o</div>
-        <select>
+      <div class="flex min-w-0 flex-col gap-[3px] col-span-3">
+        <div class="text-[11px] font-semibold leading-[1.1] tracking-[.02em] text-[#374151]">Suaviza&ccedil;&atilde;o</div>
+        <select class="min-h-[30px] w-full rounded-[10px] border border-[#e5e7eb] bg-white px-[10px] py-1 text-[13px] leading-[1.15] text-[#111827]">
           <option selected>R&aacute;pida</option>
           <option>M&eacute;dia</option>
           <option>Lenta</option>
@@ -164,8 +164,8 @@
   </div>
 
   <!-- Monitoramento ao vivo -->
-  <div class="card">
-    <div class="panel-head"><h2 class="panel-title">Monitoramento ao vivo</h2></div>
+  <div class="rounded-[14px] border border-[#e5e7eb] bg-white px-[18px] pt-4 pb-[18px] mb-3 shadow-[0_1px_2px_rgba(0,0,0,.05)]">
+    <div class="-mx-[14px] -mt-3 mb-[14px] flex flex-wrap items-center justify-between gap-2 rounded-t-[14px] border-b border-[#e5e7eb] bg-[#f9fafb] px-[14px] py-[10px]"><h2 class="m-0 text-[14px] font-semibold leading-[1.2] tracking-[.01em] text-[#111827]">Monitoramento ao vivo</h2></div>
     <div class="live-grid">
       <div class="live-card">
         <div class="live-label">Modo</div>
@@ -173,7 +173,7 @@
       </div>
       <div class="live-card">
         <div class="live-label">Monitoramento do sinal</div>
-        <span class="chip ok">OK</span>
+        <span class="chip !bg-[#16a34a]">OK</span>
       </div>
       <div class="live-card">
         <div class="live-label">Alertas</div>
@@ -198,8 +198,8 @@
 
     <div style="margin-top:16px">
       <div class="live-label" style="margin-bottom:6px">Pr&eacute;via da barra</div>
-      <div class="bar"><div class="fill ok" style="width:26%"></div></div>
-      <div class="bar-labels"><span>0 bar</span><span>10 bar</span></div>
+      <div class="my-[6px] mb-[2px] h-3 overflow-hidden rounded-md bg-[#e5e7eb]"><div class="h-full rounded-md !bg-[#16a34a]" style="width:26%"></div></div>
+      <div class="flex justify-between text-[12px] leading-none text-[#6b7280]"><span>0 bar</span><span>10 bar</span></div>
     </div>
   </div>
 
